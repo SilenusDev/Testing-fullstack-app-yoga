@@ -15,17 +15,23 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2020",
+    "target": "ES2022",
     "module": "es2020",
     "lib": [
       "es2020",
       "dom"
     ],
-    "types": ["jest", "cypress", "node"]
-    ,
+    "types": [
+      "jest",
+      "cypress",
+      "node"
+    ],
     "paths": {
-        "src/*": ["./src/*"]
-    } 
+      "src/*": [
+        "./src/*"
+      ]
+    },
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -39,6 +45,8 @@
     "cypress.config.ts"
   ]
 }
+
+
 // /* To learn more about this file see: https://angular.io/config/tsconfig. */
 // {
 //   "compileOnSave": false,
