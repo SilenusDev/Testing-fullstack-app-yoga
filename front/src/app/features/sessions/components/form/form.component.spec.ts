@@ -1,33 +1,78 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import {  ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterTestingModule } from '@angular/router/testing';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { of } from 'rxjs';
 import { expect } from '@jest/globals';
 import { SessionService } from 'src/app/services/session.service';
 import { SessionApiService } from '../../services/session-api.service';
-
+import { TeacherService } from '../../../../services/teacher.service';
 import { FormComponent } from './form.component';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('FormComponent', () => {
   let component: FormComponent;
   let fixture: ComponentFixture<FormComponent>;
+  let mockSessionApiService: any;
+  let mockTeacherService: any;
+  let mockRouter: any;
+  let mockSnackBar: any;
 
+  // Mock de SessionService pour simuler les informations de session
   const mockSessionService = {
     sessionInformation: {
-      admin: true
-    }
-  } 
+      admin: true,
+      id: 1,
+    },
+  };
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
+    // Mock de SessionApiService pour simuler les appels API
+    mockSessionApiService = {
+      create: jest.fn().mockReturnValue(of({})),
+      update: jest.fn().mockReturnValue(of({})),
+      detail: jest.fn().mockReturnValue(
+        of({
+          id: 1,
+          name: 'Yoga Session',
+          date: new Date('2023-12-01'),
+          teacher_id: 1,
+          description: 'Relaxation exercises',
+        })
+      ),
+    };
 
+    // Mock de TeacherService pour simuler la récupération des professeurs
+    mockTeacherService = {
+      all: jest.fn().mockReturnValue(
+        of([
+          { id: 1, firstName: 'John', lastName: 'Doe' },
+          { id: 2, firstName: 'Jane', lastName: 'Smith' },
+        ])
+      ),
+    };
+
+    // Mock de Router pour simuler la navigation
+    mockRouter = {
+      navigate: jest.fn(),
+      url: '/sessions/create',
+    };
+
+    // Mock de MatSnackBar pour simuler les notifications
+    mockSnackBar = {
+      open: jest.fn(),
+    };
+
+    // Configuration du module de test avec les mocks et les modules nécessaires
+    await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
         HttpClientModule,
@@ -35,170 +80,114 @@ describe('FormComponent', () => {
         MatIconModule,
         MatFormFieldModule,
         MatInputModule,
-        ReactiveFormsModule, 
+        ReactiveFormsModule,
         MatSnackBarModule,
         MatSelectModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
       ],
       providers: [
         { provide: SessionService, useValue: mockSessionService },
-        SessionApiService
+        { provide: SessionApiService, useValue: mockSessionApiService },
+        { provide: TeacherService, useValue: mockTeacherService },
+        { provide: Router, useValue: mockRouter },
+        { provide: MatSnackBar, useValue: mockSnackBar },
+        {
+          provide: ActivatedRoute,
+          useValue: { snapshot: { paramMap: { get: jest.fn(() => '1') } } },
+        },
       ],
-      declarations: [FormComponent]
-    })
-      .compileComponents();
+      declarations: [FormComponent],
+    }).compileComponents();
 
+    // Création du composant et détection des changements
     fixture = TestBed.createComponent(FormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
+  // Test pour vérifier que le composant est créé
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  // Test pour vérifier l'initialisation du formulaire en mode création
+  it('should initialize form in create mode', () => {
+    expect(component.onUpdate).toBeFalsy();
+    expect(component.sessionForm?.value).toEqual({
+      name: '',
+      date: '',
+      teacher_id: '',
+      description: '',
+    });
+  });
+
+  // Test pour vérifier l'initialisation du formulaire en mode mise à jour
+  it('should initialize form in update mode', () => {
+    mockRouter.url = '/sessions/update/1';
+    component.ngOnInit();
+    expect(mockSessionApiService.detail).toHaveBeenCalledWith('1');
+    expect(component.onUpdate).toBeTruthy();
+    expect(component.sessionForm?.value).toEqual({
+      name: 'Yoga Session',
+      date: '2023-12-01',
+      teacher_id: 1,
+      description: 'Relaxation exercises',
+    });
+  });
+
+  // Test pour vérifier l'appel de la méthode de création lors de la soumission du formulaire en mode création
+  it('should call create method on submit in create mode', () => {
+    component.sessionForm?.setValue({
+      name: 'Yoga Session',
+      date: '2023-12-01',
+      teacher_id: 1,
+      description: 'Relaxation exercises',
+    });
+
+    component.submit();
+    expect(mockSessionApiService.create).toHaveBeenCalledWith({
+      name: 'Yoga Session',
+      date: '2023-12-01',
+      teacher_id: 1,
+      description: 'Relaxation exercises',
+    });
+    expect(mockSnackBar.open).toHaveBeenCalledWith(
+      'Session created !',
+      'Close',
+      { duration: 3000 }
+    );
+    expect(mockRouter.navigate).toHaveBeenCalledWith(['sessions']);
+  });
+
+  // Test pour vérifier l'appel de la méthode de mise à jour lors de la soumission du formulaire en mode mise à jour
+  it('should call update method on submit in update mode', () => {
+    mockRouter.url = '/sessions/update/1';
+    component.ngOnInit();
+
+    component.sessionForm?.setValue({
+      name: 'Yoga Session Updated',
+      date: '2023-12-02',
+      teacher_id: 2,
+      description: 'Updated description',
+    });
+
+    component.submit();
+    expect(mockSessionApiService.update).toHaveBeenCalledWith('1', {
+      name: 'Yoga Session Updated',
+      date: '2023-12-02',
+      teacher_id: 2,
+      description: 'Updated description',
+    });
+    expect(mockSnackBar.open).toHaveBeenCalledWith(
+      'Session updated !',
+      'Close',
+      { duration: 3000 }
+    );
+    expect(mockRouter.navigate).toHaveBeenCalledWith(['sessions']);
+  });
+
+  // Test pour vérifier que les professeurs sont récupérés à l'initialisation
+  it('should fetch teachers on init', () => {
+    expect(mockTeacherService.all).toHaveBeenCalled();
+  });
 });
-
-
-// import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-// import { ComponentFixture, TestBed } from '@angular/core/testing';
-// import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
-// import { MatCardModule } from '@angular/material/card';
-// import { MatFormFieldModule } from '@angular/material/form-field';
-// import { MatIconModule } from '@angular/material/icon';
-// import { MatInputModule } from '@angular/material/input';
-// import { MatSelectModule } from '@angular/material/select';
-// import { MatSnackBarModule } from '@angular/material/snack-bar';
-// import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
-// import { RouterTestingModule } from '@angular/router/testing';
-// import { of } from 'rxjs';
-// import { expect } from '@jest/globals';
-// import { SessionService } from 'src/app/services/session.service';
-// import { SessionApiService } from 'src/app/features/sessions/services/session-api.service';
-// import { TeacherService } from 'src/app/services/teacher.service';
-// import { Session } from 'src/app/features/sessions/interfaces/session.interface';
-// import { FormComponent } from './form.component';
-
-// describe('FormComponent', () => {
-//   let component: FormComponent;
-//   let fixture: ComponentFixture<FormComponent>;
-//   let sessionApiService: SessionApiService;
-//   let teacherService: TeacherService;
-//   let httpMock: HttpTestingController;
-//   let fb: FormBuilder;
-
-//   const mockSessionService = {
-//     sessionInformation: {
-//       admin: true,
-//       id: 1
-//     }
-//   };
-
-//   const mockSession: Session = {
-//     id: 1,
-//     name: 'Session 1',
-//     description: 'Description 1',
-//     date: new Date(),
-//     teacher_id: 1,
-//     users: [1],
-//     createdAt: new Date(),
-//     updatedAt: new Date()
-//   };
-
-//   beforeEach(async () => {
-//     await TestBed.configureTestingModule({
-//       imports: [
-//         RouterTestingModule,
-//         HttpClientTestingModule,
-//         MatCardModule,
-//         MatIconModule,
-//         MatFormFieldModule,
-//         MatInputModule,
-//         ReactiveFormsModule,
-//         MatSnackBarModule,
-//         MatSelectModule,
-//         NoopAnimationsModule // Utiliser NoopAnimationsModule pour désactiver les animations
-//       ],
-//       providers: [
-//         { provide: SessionService, useValue: mockSessionService },
-//         SessionApiService,
-//         TeacherService,
-//         FormBuilder
-//       ],
-//       declarations: [FormComponent]
-//     }).compileComponents();
-
-//     fixture = TestBed.createComponent(FormComponent);
-//     component = fixture.componentInstance;
-//     sessionApiService = TestBed.inject(SessionApiService);
-//     teacherService = TestBed.inject(TeacherService);
-//     httpMock = TestBed.inject(HttpTestingController);
-//     fb = TestBed.inject(FormBuilder);
-//     fixture.detectChanges();
-//   });
-
-//   afterEach(() => {
-//     httpMock.verify(); // Vérifie qu'il n'y a pas de requêtes HTTP en attente
-//   });
-
-//   // Test 1 : Vérifier que le composant est bien créé
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
-
-//   // Test 2 : Vérifier que la méthode ngOnInit initialise correctement le formulaire
-//   it('should initialize the form on ngOnInit', () => {
-//     component.id = '1'; // Assurez-vous que l'ID est défini
-//     const req = httpMock.expectOne(`api/session/${component.id}`);
-//     expect(req.request.method).toBe('GET');
-//     req.flush(mockSession);
-
-//     component.ngOnInit();
-
-//     expect(component.sessionForm).toBeDefined();
-//     expect(component.sessionForm?.value).toEqual({
-//       name: mockSession.name,
-//       date: new Date(mockSession.date).toISOString().split('T')[0],
-//       teacher_id: mockSession.teacher_id,
-//       description: mockSession.description
-//     });
-//   });
-
-//   // Test 3 : Vérifier que la méthode submit crée ou met à jour une session
-//   it('should create or update a session on submit', () => {
-//     const session = {
-//       name: 'New Session',
-//       date: new Date().toISOString().split('T')[0],
-//       teacher_id: 1,
-//       description: 'New Description'
-//     };
-
-//     component.sessionForm = fb.group({
-//       name: [session.name, [Validators.required]],
-//       date: [session.date, [Validators.required]],
-//       teacher_id: [session.teacher_id, [Validators.required]],
-//       description: [session.description, [Validators.required, Validators.max(2000)]]
-//     });
-
-//     // Simuler la réponse de l'API pour la création de la session
-//     const createReq = httpMock.expectOne('api/session');
-//     expect(createReq.request.method).toBe('POST');
-//     createReq.flush(mockSession);
-
-//     component.submit();
-
-//     expect(component.matSnackBar.open).toHaveBeenCalledWith('Session created !', 'Close', { duration: 3000 });
-//     expect(component.router.navigate).toHaveBeenCalledWith(['sessions']);
-//   });
-
-//   // Test 4 : Vérifier que la méthode exitPage affiche un message et redirige l'utilisateur
-//   it('should display a message and navigate to sessions page', () => {
-//     const message = 'Session created !';
-//     const spySnackBar = jest.spyOn(component.matSnackBar, 'open');
-//     const spyRouter = jest.spyOn(component.router, 'navigate');
-
-//     component.exitPage(message);
-
-//     expect(spySnackBar).toHaveBeenCalledWith(message, 'Close', { duration: 3000 });
-//     expect(spyRouter).toHaveBeenCalledWith(['sessions']);
-//   });
-// });

@@ -5,12 +5,17 @@ export default defineConfig({
   screenshotsFolder: 'cypress/screenshots',
   fixturesFolder: 'cypress/fixtures',
   video: false,
-  e2e: {
-    // We've imported your old cypress plugins here.
-    // You may want to clean this up later by importing these.
+    e2e: {
+    // Enable experimental session and origin
+    experimentalSessionAndOrigin: true,  // Ajout du flag pour activer les sessions
+
+    // Nous avons importé tes anciens plugins cypress ici.
+    // Tu souhaiteras peut-être nettoyer cela plus tard en important ces derniers.
     setupNodeEvents(on, config) {
+	  require('@cypress/code-coverage/task')(on, config);
       return require('./cypress/plugins/index.ts').default(on, config)
     },
     baseUrl: 'http://localhost:4200',
   },
 })
+

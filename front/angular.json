@@ -20,6 +20,9 @@
         "build": {
           "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            },
             "outputPath": "dist/yoga",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -66,14 +69,19 @@
               "sourceMap": true,
               "namedChunks": true
             },
-            "e2e": {
-              "extractLicenses": false,
+            "test": {
               "sourceMap": true,
               "namedChunks": true,
               "vendorChunk": true,
               "customWebpackConfig": {
-                "path": "./cypress/coverage.webpack.ts"
-              }
+                "path": "./webpack.config.js"
+              },
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.test.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -81,15 +89,15 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "project-name:build",
+            "buildTarget": "yoga:build:development",
             "proxyConfig": "src/proxy.config.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "yoga:build:production"
+              "buildTarget": "yoga:build:production"
             },
             "development": {
-              "browserTarget": "yoga:build:development"
+              "buildTarget": "yoga:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -97,57 +105,41 @@
         "serve-coverage": {
           "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
-            "browserTarget": "yoga:build:e2e"
+            "buildTarget": "yoga:build:test"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "yoga:build:production"
+            }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "yoga:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-builders/jest:run",
-          "options": {
-            "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
-            "scripts": []
+            "buildTarget": "yoga:build"
           }
         },
         "cypress-run": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "yoga:serve"
+            "buildTarget": "yoga:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "yoga:serve:production"
+              "buildTarget": "yoga:serve:production"
             }
-          }
-        },
-        "cypress-open": {
-          "builder": "@cypress/schematic:cypress",
-          "options": {
-            "watch": true,
-            "headless": false
           }
         },
         "e2e": {
           "builder": "@cypress/schematic:cypress",
           "options": {
-            "devServerTarget": "yoga:serve-coverage",
+            "buildTarget": "yoga:serve-coverage",
             "watch": true,
             "headless": false
           },
           "configurations": {
             "production": {
-              "devServerTarget": "yoga:serve-coverage:production"
+              "buildTarget": "yoga:serve-coverage:production"
             }
           }
         },
@@ -155,13 +147,13 @@
           "builder": "@cypress/schematic:cypress",
           "options": {
             "browser": "chrome",
-            "devServerTarget": "yoga:serve-coverage",
+            "buildTarget": "yoga:serve-coverage",
             "headless": true,
             "watch": false
           },
           "configurations": {
             "production": {
-              "devServerTarget": "yoga:serve-coverage:production"
+              "buildTarget": "yoga:serve-coverage:production"
             }
           }
         }
