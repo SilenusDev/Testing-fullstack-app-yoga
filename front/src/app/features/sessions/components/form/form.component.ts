@@ -6,30 +6,27 @@ import { SessionService } from '../../../../services/session.service';
 import { TeacherService } from '../../../../services/teacher.service';
 import { Session } from '../../interfaces/session.interface';
 import { SessionApiService } from '../../services/session-api.service';
-import { NgZone } from '@angular/core';
 
 @Component({
-    selector: 'app-form',
-    templateUrl: './form.component.html',
-    styleUrls: ['./form.component.scss'],
-    standalone: false
+  selector: 'app-form',
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.scss']
 })
 export class FormComponent implements OnInit {
 
   public onUpdate: boolean = false;
   public sessionForm: FormGroup | undefined;
   public teachers$ = this.teacherService.all();
-  public id: string | undefined;
+  private id: string | undefined;
 
   constructor(
     private route: ActivatedRoute,
     private fb: FormBuilder,
-    public matSnackBar: MatSnackBar,
+    private matSnackBar: MatSnackBar,
     private sessionApiService: SessionApiService,
     private sessionService: SessionService,
     private teacherService: TeacherService,
-    public router: Router,
-    private ngZone: NgZone // Inject NgZone
+    private router: Router
   ) {
   }
 
@@ -63,7 +60,7 @@ export class FormComponent implements OnInit {
     }
   }
 
-  public initForm(session?: Session): void {
+  private initForm(session?: Session): void {
     this.sessionForm = this.fb.group({
       name: [
         session ? session.name : '',
@@ -87,12 +84,8 @@ export class FormComponent implements OnInit {
     });
   }
 
-  public exitPage(message: string): void {
-    this.ngZone.run(() => { // Utiliser ngZone.run pour la navigation
-      this.matSnackBar.open(message, 'Close', { duration: 3000 });
-      this.router.navigate(['sessions']);
-    });
+  private exitPage(message: string): void {
+    this.matSnackBar.open(message, 'Close', { duration: 3000 });
+    this.router.navigate(['sessions']);
   }
 }
-
-

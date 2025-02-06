@@ -9,10 +9,9 @@ import { Session } from '../../interfaces/session.interface';
 import { SessionApiService } from '../../services/session-api.service';
 
 @Component({
-    selector: 'app-detail',
-    templateUrl: './detail.component.html',
-    styleUrls: ['./detail.component.scss'],
-    standalone: false
+  selector: 'app-detail',
+  templateUrl: './detail.component.html',
+  styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
   public session: Session | undefined;
@@ -30,9 +29,8 @@ export class DetailComponent implements OnInit {
     private sessionService: SessionService,
     private sessionApiService: SessionApiService,
     private teacherService: TeacherService,
-    public matSnackBar: MatSnackBar,
-    public router: Router 
-  ) {
+    private matSnackBar: MatSnackBar,
+    private router: Router) {
     this.sessionId = this.route.snapshot.paramMap.get('id')!;
     this.isAdmin = this.sessionService.sessionInformation!.admin;
     this.userId = this.sessionService.sessionInformation!.id.toString();
@@ -75,5 +73,5 @@ export class DetailComponent implements OnInit {
           .subscribe((teacher: Teacher) => this.teacher = teacher);
       });
   }
-}
 
+}

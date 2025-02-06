@@ -1,12 +1,9 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "isolatedModules": false,
-    "types": ["cypress"]  // Ajouter cette ligne pour inclure les types Cypress
+    "isolatedModules": false
   },
   "include": [
-    "../node_modules/cypress",
-    "cypress/**/*.ts",
-    "**/*.ts"  // Cela inclut tous les fichiers .ts dans Cypress
+    "../node_modules/cypress"
   ]
 }

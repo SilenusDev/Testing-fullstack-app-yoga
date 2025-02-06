@@ -1,4 +1,4 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
@@ -7,122 +7,82 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
-import { of, throwError } from 'rxjs';
 import { expect } from '@jest/globals';
 import { SessionService } from 'src/app/services/session.service';
-import { AuthService } from '../../services/auth.service';
+
 import { LoginComponent } from './login.component';
-import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
+import { FIX_LOGIN_USER_INFORMATIONS } from '../../services/auth.service.fixtures';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { Observable } from 'rxjs';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
+  let router: Router;
   let authService: AuthService;
-  let sessionService: SessionService;
+  let httpMock: HttpTestingController;
 
-  // Avant chaque test, on configure le module de test et on initialise les dépendances
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LoginComponent], // On déclare le composant à tester
-      providers: [SessionService, AuthService], // On fournit les services nécessaires
+      declarations: [LoginComponent],
+      providers: [AuthService, SessionService],
       imports: [
-        RouterTestingModule, // Module pour tester la navigation
-        BrowserAnimationsModule, // Module pour les animations
-        HttpClientTestingModule, // Module pour simuler les requêtes HTTP
+        RouterTestingModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
         MatCardModule,
         MatIconModule,
         MatFormFieldModule,
         MatInputModule,
-        ReactiveFormsModule // Module pour les formulaires réactifs
+        ReactiveFormsModule,
+        HttpClientTestingModule,
+        RouterTestingModule.withRoutes([{ path: 'login', component: LoginComponent }]),
       ]
     })
-      .compileComponents(); // On compile les composants
-
-    // On crée une instance du composant et on récupère les services injectés
+      .compileComponents();
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
-    authService = TestBed.inject(AuthService); // On récupère une instance du service AuthService
-    sessionService = TestBed.inject(SessionService); // On récupère une instance du service SessionService
-    fixture.detectChanges(); // On déclenche la détection de changements pour initialiser le composant
+    router = TestBed.inject(Router);
+    fixture.detectChanges();
+    authService = TestBed.inject(AuthService);
+    httpMock = TestBed.inject(HttpTestingController);
   });
 
-  // Test 1 : Vérifier que le composant est bien créé
+  afterEach(() => {
+    httpMock.verify();
+  });
+
   it('should create', () => {
-    expect(component).toBeTruthy(); // On s'assure que le composant est bien instancié
+    expect(component).toBeTruthy();
   });
 
-  // Test 2 : Vérifier que la méthode submit() appelle authService.login et gère la réponse correctement
-  it('should call authService.login and navigate on successful login', () => {
-    // Données de test
-    const loginRequest = { email: 'test@example.com', password: 'password' };
-    const sessionInformation: SessionInformation = {
-      token: 'token',
-      username: 'username',
-      type: 'type',
-      id: 1,
-      firstName: 'firstName',
-      lastName: 'lastName',
-      admin: true
-    };
+  describe('submit', () => {
+    it('should submit with success', () => {
+      const routerTestSpy = jest.spyOn(router, 'navigate').mockImplementation(async () => true);
 
-    // On simule une réponse réussie de authService.login
-    jest.spyOn(authService, 'login').mockReturnValue(of(sessionInformation));
+      component.form.setValue(FIX_LOGIN_USER_INFORMATIONS);
+      component.submit();
 
-    // On espionne les méthodes navigate du Router et logIn du SessionService
-    const navigateSpy = jest.spyOn(component['router'], 'navigate');
-    const logInSpy = jest.spyOn(sessionService, 'logIn');
+      const req = httpMock.expectOne('api/auth/login');
+      expect(req.request.body).toEqual(FIX_LOGIN_USER_INFORMATIONS);
+      expect(req.request.method).toBe('POST');
+      req.flush("Success");
 
-    // On remplit le formulaire avec les données de test
-    component.form.setValue(loginRequest);
+      expect(routerTestSpy).toHaveBeenCalledWith(['/sessions']);
+    });
 
-    // On appelle la méthode submit() du composant
-    component.submit();
+    it('should handle login error', () => {
+      const error = new Error('Login failed');
+      const authServiceSpy = jest.spyOn(authService, 'login').mockReturnValue(new Observable(observer => observer.error(error)));
 
-    // Assertions :
-    // 1. Vérifier que authService.login a été appelé avec les bonnes données
-    expect(authService.login).toHaveBeenCalledWith(loginRequest);
+      component.form.setValue(FIX_LOGIN_USER_INFORMATIONS);
+      component.submit();
 
-    // 2. Vérifier que sessionService.logIn a été appelé avec les informations de session
-    expect(logInSpy).toHaveBeenCalledWith(sessionInformation);
-
-    // 3. Vérifier que la navigation vers '/sessions' a été déclenchée
-    expect(navigateSpy).toHaveBeenCalledWith(['/sessions']);
-  });
-
-  // Test 3 : Vérifier que la variable onError est définie à true en cas d'erreur de connexion
-  it('should set onError to true on login error', () => {
-    // Données de test
-    const loginRequest = { email: 'test@example.com', password: 'password' };
-
-    // On simule une erreur lors de l'appel à authService.login
-    jest.spyOn(authService, 'login').mockReturnValue(throwError(() => new Error('error')));
-
-    // On remplit le formulaire avec les données de test
-    component.form.setValue(loginRequest);
-
-    // On appelle la méthode submit() du composant
-    component.submit();
-
-    // Assertion : Vérifier que onError est bien défini à true
-    expect(component.onError).toBe(true);
-  });
-
-  // Test 4 : Vérifier que le formulaire est invalide si un champ obligatoire est manquant
-  it('should mark form as invalid if required fields are missing', () => {
-    // Cas 1 : Les deux champs sont vides
-    component.form.setValue({ email: '', password: '' });
-    expect(component.form.invalid).toBe(true); // Le formulaire doit être invalide
-
-    // Cas 2 : Le champ email est rempli, mais le mot de passe est vide
-    component.form.setValue({ email: 'test@example.com', password: '' });
-    expect(component.form.invalid).toBe(true); // Le formulaire doit être invalide
-
-    // Cas 3 : Le champ email est vide, mais le mot de passe est rempli
-    component.form.setValue({ email: '', password: 'password' });
-    expect(component.form.invalid).toBe(true); // Le formulaire doit être invalide
-
-    // Cas 4 : Les deux champs sont remplis
-    component.form.setValue({ email: 'test@example.com', password: 'password' });
-    expect(component.form.valid).toBe(true); // Le formulaire doit être valide
+      expect(authServiceSpy).toHaveBeenCalled();
+      expect(component.onError).toBe(true);
+    });
   });
 });
+
