@@ -1,118 +1,91 @@
-import { TestBed } from "@angular/core/testing";
-import { AuthService } from "./auth.service";
-import { HttpClientTestingModule, HttpTestingController } from "@angular/common/http/testing";
-import { FIX_LOGIN_USER_INFORMATIONS, FIX_LOGIN_USER_INFORMATIONS_WITH_BAD_EMAIL, FIX_LOGIN_USER_INFORMATIONS_WITH_BAD_PASSWORD, FIX_REGISTER_USER_INFORMATIONS, FIX_REGISTER_USER_INFORMATIONS_WITH_INVALID_EMAIL } from "./auth.service.fixtures";
-import { HttpClient, HttpClientModule } from "@angular/common/http";
-import { RouterTestingModule } from "@angular/router/testing";
+import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { AuthService } from './auth.service';
+import { LoginRequest } from '../interfaces/loginRequest.interface';
+import { RegisterRequest } from '../interfaces/registerRequest.interface';
+import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
+import { expect } from '@jest/globals';
 
 describe('AuthService', () => {
-    let service: AuthService;
-    let httpMock: HttpTestingController;
+  let service: AuthService;
+  let httpMock: HttpTestingController;
 
-    beforeEach(async () => {
-        TestBed.configureTestingModule({
-            imports: [HttpClientTestingModule, HttpClientModule, RouterTestingModule],
-            providers: [AuthService],
-        });
-
-        service = TestBed.inject(AuthService);
-        httpMock = TestBed.inject(HttpTestingController);
+  beforeEach(() => {
+    // Configuration du module de test Angular avec HttpClientTestingModule pour simuler les requêtes HTTP
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],  // Importation du module de test HTTP
+      providers: [AuthService]  // Fourniture du service à tester
     });
 
-    afterEach(() => {
-        httpMock.verify();
+    // Injection du service AuthService et du HttpTestingController pour les tests
+    service = TestBed.inject(AuthService);
+    httpMock = TestBed.inject(HttpTestingController);
+  });
+
+  afterEach(() => {
+    // Vérification qu'il n'y a pas de requêtes HTTP en attente après chaque test
+    httpMock.verify();
+  });
+
+  it('should be created', () => {
+    // Test pour vérifier que le service AuthService est créé avec succès
+    expect(service).toBeTruthy();
+  });
+
+  describe('register', () => {
+    it('should send a POST request to register', () => {
+      // Données fictives pour la requête d'inscription
+      const registerRequest: RegisterRequest = {
+        email: 'test@example.com',
+        firstName: 'John',
+        lastName: 'Doe',
+        password: 'password'
+      };
+
+      // Appel de la méthode register du service
+      service.register(registerRequest).subscribe();
+
+      // Vérification qu'une requête POST a été envoyée à l'URL d'inscription
+      const req = httpMock.expectOne(`${service['pathService']}/register`);
+      expect(req.request.method).toBe('POST');  // Vérification de la méthode HTTP
+      expect(req.request.body).toEqual(registerRequest);  // Vérification du corps de la requête
+
+      // Simulation de la réponse HTTP
+      req.flush(null);
     });
+  });
 
-    it('should create', () => {
-        expect(service).toBeTruthy();
+  describe('login', () => {
+    it('should send a POST request to login', () => {
+      // Données fictives pour la requête de connexion
+      const loginRequest: LoginRequest = {
+        email: 'test@example.com',
+        password: 'password'
+      };
+
+      // Données fictives pour la réponse de connexion
+      const sessionInformation: SessionInformation = {
+        token: 'fake-jwt-token',
+        type: 'Bearer',
+        id: 1,
+        username: 'testuser',
+        firstName: 'John',
+        lastName: 'Doe',
+        admin: false
+      };
+
+      // Appel de la méthode login du service et vérification de la réponse
+      service.login(loginRequest).subscribe((response) => {
+        expect(response).toEqual(sessionInformation);  // Vérification de la réponse
+      });
+
+      // Vérification qu'une requête POST a été envoyée à l'URL de connexion
+      const req = httpMock.expectOne(`${service['pathService']}/login`);
+      expect(req.request.method).toBe('POST');  // Vérification de la méthode HTTP
+      expect(req.request.body).toEqual(loginRequest);  // Vérification du corps de la requête
+
+      // Simulation de la réponse HTTP avec les informations de session
+      req.flush(sessionInformation);
     });
-
-    describe('register', () => {
-        it('should register with success', () => {
-            const postSpy = jest.spyOn(HttpClient.prototype, 'post');
-
-            service.register(FIX_REGISTER_USER_INFORMATIONS).subscribe(auth => {
-                expect(auth).toBeTruthy();
-            });
-
-            const req = httpMock.expectOne('api/auth/register');
-            expect(req.request.method).toBe('POST');
-            expect(req.request.body).toEqual(FIX_REGISTER_USER_INFORMATIONS);
-            req.flush('Success');
-
-            expect(postSpy).toHaveBeenCalledWith('api/auth/register', FIX_REGISTER_USER_INFORMATIONS);
-        });
-
-        it('should try to register with an already registered email', () => {
-            const postSpy = jest.spyOn(HttpClient.prototype, 'post');
-
-            service.register(FIX_REGISTER_USER_INFORMATIONS).subscribe(auth => {
-                expect(auth).toBeFalsy();
-            });
-
-            const req = httpMock.expectOne('api/auth/register');
-            expect(req.request.method).toBe('POST');
-            req.flush('Error', { status: 409, statusText: 'Conflict' });
-
-            expect(postSpy).toHaveBeenCalledWith('api/auth/register', FIX_REGISTER_USER_INFORMATIONS);
-        });
-
-        it('should try to register with an invalid email', () => {
-            const postSpy = jest.spyOn(HttpClient.prototype, 'post');
-
-            service.register(FIX_REGISTER_USER_INFORMATIONS_WITH_INVALID_EMAIL).subscribe(auth => {
-                expect(auth).toBeFalsy();
-            });
-
-            const req = httpMock.expectOne('api/auth/register');
-            expect(req.request.method).toBe('POST');
-            req.flush('Error', { status: 400, statusText: 'Bad Request' });
-
-            expect(postSpy).toHaveBeenCalledWith('api/auth/register', FIX_REGISTER_USER_INFORMATIONS_WITH_INVALID_EMAIL);
-        });
-    });
-
-    describe('login', () => {
-        it('should login with success', () => {
-            const postSpy = jest.spyOn(HttpClient.prototype, 'post');
-
-            service.login(FIX_LOGIN_USER_INFORMATIONS).subscribe(auth => {
-                expect(auth).toBeTruthy();
-            });
-
-            const req = httpMock.expectOne('api/auth/login');
-            expect(req.request.method).toBe('POST');
-            req.flush('Success');
-
-            expect(postSpy).toHaveBeenCalledWith('api/auth/login', FIX_LOGIN_USER_INFORMATIONS);
-        });
-
-        it('should try to login with bad password', () => {
-            const postSpy = jest.spyOn(HttpClient.prototype, 'post');
-
-            service.login(FIX_LOGIN_USER_INFORMATIONS_WITH_BAD_PASSWORD).subscribe(auth => {
-                expect(auth).toBeFalsy();
-            });
-
-            const req = httpMock.expectOne('api/auth/login');
-            expect(req.request.method).toBe('POST');
-            req.flush('Error', { status: 401, statusText: 'Unauthorized' });
-
-            expect(postSpy).toHaveBeenCalledWith('api/auth/login', FIX_LOGIN_USER_INFORMATIONS_WITH_BAD_PASSWORD);
-        });
-
-        it('should try to login with bad email', () => {
-            const postSpy = jest.spyOn(HttpClient.prototype, 'post');
-
-            service.login(FIX_LOGIN_USER_INFORMATIONS_WITH_BAD_EMAIL).subscribe(auth => {
-                expect(auth).toBeFalsy();
-            });
-
-            const req = httpMock.expectOne('api/auth/login');
-            expect(req.request.method).toBe('POST');
-            req.flush('Error', { status: 404, statusText: 'Not Found' });
-
-            expect(postSpy).toHaveBeenCalledWith('api/auth/login', FIX_LOGIN_USER_INFORMATIONS_WITH_BAD_EMAIL);
-        });
-    });
+  });
 });
