@@ -1,4 +1,4 @@
-# Yoga App Backend
+# Yoga APP
 
 ## MySQL
 
@@ -17,8 +17,27 @@ In back folder install dependencies :
 Launch API :
 > mvn spring-boot:run
 
-### tests
+### Integration tests
 
 In back folder, launch tests with :
 > mvn clean test
 
+
+## Frontend
+
+In front folder install dependencies :
+> npm install
+
+Launching Angular:
+> npm run start
+
+### Unitary tests
+
+Launching test:
+> npm run test
+
+### E2E tests
+
+Launching test:
+> npm run e2e
+> npx cypress run 
