@@ -22,6 +22,8 @@ Launch API :
 In back folder, launch tests with :
 > mvn clean test
 
+coverage report location
+> /back/target/site/jacoco/index.html
 
 ## Frontend
 
@@ -36,8 +38,14 @@ Launching Angular:
 Launching test:
 > npm run test
 
+coverage report location
+> /front/coverage/index.html
+
 ### E2E tests
 
 Launching test:
 > npm run e2e
 > npx cypress run 
+
+Covergage report :
+> npm run e2e:coverage

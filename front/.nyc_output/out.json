@@ -1,6 +1,6 @@
 {
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\polyfills.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\polyfills.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\polyfills.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\polyfills.ts",
     "statementMap": {},
     "fnMap": {},
     "branchMap": {},
@@ -13,17 +13,17 @@
       "names": [],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\polyfills.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\polyfills.ts"
       ],
       "sourcesContent": [
         "/**\r\n * This file includes polyfills needed by Angular and is loaded before the app.\r\n * You can add your own extra polyfills to this file.\r\n *\r\n * This file is divided into 2 sections:\r\n *   1. Browser polyfills. These are applied before loading ZoneJS and are sorted by browsers.\r\n *   2. Application imports. Files imported after ZoneJS that should be loaded before your main\r\n *      file.\r\n *\r\n * The current setup is for so-called \"evergreen\" browsers; the last versions of browsers that\r\n * automatically update themselves. This includes recent versions of Safari, Chrome (including\r\n * Opera), Edge on the desktop, and iOS and Chrome on mobile.\r\n *\r\n * Learn more in https://angular.io/guide/browser-support\r\n */\r\n\r\n/***************************************************************************************************\r\n * BROWSER POLYFILLS\r\n */\r\n\r\n/**\r\n * By default, zone.js will patch all possible macroTask and DomEvents\r\n * user can disable parts of macroTask/DomEvents patch by setting following flags\r\n * because those flags need to be set before `zone.js` being loaded, and webpack\r\n * will put import in the top of bundle, so user need to create a separate file\r\n * in this directory (for example: zone-flags.ts), and put the following flags\r\n * into that file, and then add the following code before importing zone.js.\r\n * import './zone-flags';\r\n *\r\n * The flags allowed in zone-flags.ts are listed here.\r\n *\r\n * The following flags will work for all browsers.\r\n *\r\n * (window as any).__Zone_disable_requestAnimationFrame = true; // disable patch requestAnimationFrame\r\n * (window as any).__Zone_disable_on_property = true; // disable patch onProperty such as onclick\r\n * (window as any).__zone_symbol__UNPATCHED_EVENTS = ['scroll', 'mousemove']; // disable patch specified eventNames\r\n *\r\n *  in IE/Edge developer tools, the addEventListener will also be wrapped by zone.js\r\n *  with the following flag, it will bypass `zone.js` patch for IE/Edge\r\n *\r\n *  (window as any).__Zone_enable_cross_context_check = true;\r\n *\r\n */\r\n\r\n/***************************************************************************************************\r\n * Zone JS is required by default for Angular itself.\r\n */\r\nimport 'zone.js';  // Included with Angular CLI.\r\n\r\n\r\n/***************************************************************************************************\r\n * APPLICATION IMPORTS\r\n */\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "c0730d75cee1672e608e8ae8294c860721751748"
+    "hash": "0374e3cd8b0bb03b48e9259520792790cb7ab4e2"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\session.service.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\session.service.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\session.service.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\session.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -385,35 +385,35 @@
       }
     },
     "s": {
-      "0": 152,
-      "1": 152,
-      "2": 152,
-      "3": 7803,
-      "4": 103,
-      "5": 103,
-      "6": 103,
-      "7": 19,
-      "8": 19,
-      "9": 19,
-      "10": 122,
-      "11": 152,
-      "12": 152,
-      "13": 152,
-      "14": 152
+      "0": 52,
+      "1": 52,
+      "2": 52,
+      "3": 2642,
+      "4": 35,
+      "5": 35,
+      "6": 35,
+      "7": 7,
+      "8": 7,
+      "9": 7,
+      "10": 42,
+      "11": 52,
+      "12": 52,
+      "13": 52,
+      "14": 52
     },
     "f": {
-      "0": 152,
-      "1": 152,
-      "2": 7803,
-      "3": 103,
-      "4": 19,
-      "5": 122,
-      "6": 152
+      "0": 52,
+      "1": 52,
+      "2": 2642,
+      "3": 35,
+      "4": 7,
+      "5": 42,
+      "6": 52
     },
     "b": {
       "0": [
-        152,
-        152
+        52,
+        52
       ]
     },
     "inputSourceMap": {
@@ -438,17 +438,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\session.service.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\session.service.ts"
       ],
       "sourcesContent": [
         "import { Injectable } from '@angular/core';\r\nimport { BehaviorSubject, Observable } from 'rxjs';\r\nimport { SessionInformation } from '../interfaces/sessionInformation.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class SessionService {\r\n\r\n  public isLogged = false;\r\n  public sessionInformation: SessionInformation | undefined;\r\n\r\n  private isLoggedSubject = new BehaviorSubject<boolean>(this.isLogged);\r\n\r\n  public $isLogged(): Observable<boolean> {\r\n    return this.isLoggedSubject.asObservable();\r\n  }\r\n\r\n  public logIn(user: SessionInformation): void {\r\n    this.sessionInformation = user;\r\n    this.isLogged = true;\r\n    this.next();\r\n  }\r\n\r\n  public logOut(): void {\r\n    this.sessionInformation = undefined;\r\n    this.isLogged = false;\r\n    this.next();\r\n  }\r\n\r\n  private next(): void {\r\n    this.isLoggedSubject.next(this.isLogged);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "100e94c73fed5e4e00f46109719a2cd1a7191682"
+    "hash": "216cd314df42415937f9be89ec3c873de93d7f3e"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\user.service.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\user.service.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\user.service.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\user.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -702,27 +702,27 @@
       }
     },
     "s": {
-      "0": 152,
-      "1": 25,
-      "2": 25,
-      "3": 25,
-      "4": 6,
-      "5": 152,
-      "6": 25,
-      "7": 152,
-      "8": 152
+      "0": 52,
+      "1": 9,
+      "2": 9,
+      "3": 9,
+      "4": 2,
+      "5": 52,
+      "6": 9,
+      "7": 52,
+      "8": 52
     },
     "f": {
-      "0": 152,
-      "1": 25,
-      "2": 25,
-      "3": 6,
-      "4": 25
+      "0": 52,
+      "1": 9,
+      "2": 9,
+      "3": 2,
+      "4": 9
     },
     "b": {
       "0": [
-        25,
-        25
+        9,
+        9
       ]
     },
     "inputSourceMap": {
@@ -743,17 +743,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\user.service.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\user.service.ts"
       ],
       "sourcesContent": [
         "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { User } from '../interfaces/user.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class UserService {\r\n\r\n  private pathService = 'api/user';\r\n\r\n  constructor(private httpClient: HttpClient) { }\r\n\r\n  public getById(id: string): Observable<User> {\r\n    return this.httpClient.get<User>(`${this.pathService}/${id}`);\r\n  }\r\n\r\n  public delete(id: string): Observable<any> {\r\n    return this.httpClient.delete(`${this.pathService}/${id}`);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "cf670a9ff588641181857a16ae3f8e92bad814ff"
+    "hash": "94e8a15623479789524e417d481985c311eb8af7"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\me\\me.component.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\me\\me.component.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\me\\me.component.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\me\\me.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2233,106 +2233,106 @@
       "1": 0,
       "2": 0,
       "3": 0,
-      "4": 72,
-      "5": 18,
-      "6": 18,
-      "7": 18,
-      "8": 18,
-      "9": 18,
-      "10": 18,
-      "11": 6,
-      "12": 6,
-      "13": 6,
-      "14": 18,
-      "15": 18,
-      "16": 18,
-      "17": 18,
-      "18": 18,
-      "19": 18,
-      "20": 72,
-      "21": 18,
-      "22": 18,
-      "23": 18,
-      "24": 18,
-      "25": 18,
-      "26": 18,
-      "27": 18,
-      "28": 18,
-      "29": 18,
-      "30": 18,
-      "31": 18,
-      "32": 18,
-      "33": 18,
-      "34": 18,
-      "35": 18,
-      "36": 18,
-      "37": 18,
-      "38": 18,
-      "39": 18,
-      "40": 18,
-      "41": 18,
-      "42": 72,
-      "43": 54,
-      "44": 54,
-      "45": 54,
-      "46": 54,
-      "47": 54,
-      "48": 54,
-      "49": 54,
-      "50": 54,
-      "51": 54,
-      "52": 54,
-      "53": 54,
-      "54": 54,
-      "55": 54,
-      "56": 152,
-      "57": 25,
-      "58": 25,
-      "59": 25,
-      "60": 25,
-      "61": 25,
-      "62": 18,
-      "63": 6,
-      "64": 6,
-      "65": 6,
-      "66": 6,
-      "67": 6,
-      "68": 152,
-      "69": 25,
-      "70": 152,
-      "71": 125,
-      "72": 25,
-      "73": 25,
-      "74": 6,
-      "75": 25,
-      "76": 25,
-      "77": 25,
-      "78": 25,
-      "79": 25,
-      "80": 25,
-      "81": 25,
-      "82": 25,
-      "83": 25,
-      "84": 125,
-      "85": 100,
-      "86": 100,
-      "87": 152
-    },
-    "f": {
-      "0": 0,
-      "1": 72,
-      "2": 6,
-      "3": 72,
-      "4": 152,
-      "5": 25,
-      "6": 25,
-      "7": 18,
+      "4": 24,
+      "5": 6,
+      "6": 6,
+      "7": 6,
       "8": 6,
       "9": 6,
       "10": 6,
-      "11": 25,
-      "12": 125,
-      "13": 6
+      "11": 2,
+      "12": 2,
+      "13": 2,
+      "14": 6,
+      "15": 6,
+      "16": 6,
+      "17": 6,
+      "18": 6,
+      "19": 6,
+      "20": 24,
+      "21": 6,
+      "22": 6,
+      "23": 6,
+      "24": 6,
+      "25": 6,
+      "26": 6,
+      "27": 6,
+      "28": 6,
+      "29": 6,
+      "30": 6,
+      "31": 6,
+      "32": 6,
+      "33": 6,
+      "34": 6,
+      "35": 6,
+      "36": 6,
+      "37": 6,
+      "38": 6,
+      "39": 6,
+      "40": 6,
+      "41": 6,
+      "42": 24,
+      "43": 18,
+      "44": 18,
+      "45": 18,
+      "46": 18,
+      "47": 18,
+      "48": 18,
+      "49": 18,
+      "50": 18,
+      "51": 18,
+      "52": 18,
+      "53": 18,
+      "54": 18,
+      "55": 18,
+      "56": 52,
+      "57": 9,
+      "58": 9,
+      "59": 9,
+      "60": 9,
+      "61": 9,
+      "62": 6,
+      "63": 2,
+      "64": 2,
+      "65": 2,
+      "66": 2,
+      "67": 2,
+      "68": 52,
+      "69": 9,
+      "70": 52,
+      "71": 45,
+      "72": 9,
+      "73": 9,
+      "74": 2,
+      "75": 9,
+      "76": 9,
+      "77": 9,
+      "78": 9,
+      "79": 9,
+      "80": 9,
+      "81": 9,
+      "82": 9,
+      "83": 9,
+      "84": 45,
+      "85": 36,
+      "86": 36,
+      "87": 52
+    },
+    "f": {
+      "0": 0,
+      "1": 24,
+      "2": 2,
+      "3": 24,
+      "4": 52,
+      "5": 9,
+      "6": 9,
+      "7": 6,
+      "8": 2,
+      "9": 2,
+      "10": 2,
+      "11": 9,
+      "12": 45,
+      "13": 2
     },
     "b": {
       "0": [
@@ -2340,28 +2340,28 @@
         0
       ],
       "1": [
-        18,
-        54
-      ],
-      "2": [
-        18,
-        54
-      ],
-      "3": [
-        54,
+        6,
         18
       ],
+      "2": [
+        6,
+        18
+      ],
+      "3": [
+        18,
+        6
+      ],
       "4": [
-        25,
-        25
+        9,
+        9
       ],
       "5": [
-        25,
-        100
+        9,
+        36
       ],
       "6": [
-        100,
-        25
+        36,
+        9
       ]
     },
     "inputSourceMap": {
@@ -2400,8 +2400,8 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\me\\me.component.html",
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\me\\me.component.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\me\\me.component.html",
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\me\\me.component.ts"
       ],
       "sourcesContent": [
         "<div class=\"m3\">\r\n  <mat-card>\r\n    <mat-card-title>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n        <button mat-icon-button (click)=\"back()\">\r\n          <mat-icon>arrow_back</mat-icon>\r\n        </button>\r\n        <h1>User information</h1>\r\n      </div>\r\n    </mat-card-title>\r\n    <mat-card-content>\r\n      <div *ngIf=\"user\" fxLayout=\"column\" fxLayoutAlign=\"start center\">\r\n        <p>Name: {{ user.firstName }} {{ user.lastName | uppercase }}</p>\r\n        <p>Email: {{ user.email }}</p>\r\n        <p *ngIf=\"user.admin\" class=\"my2\">You are admin</p>\r\n        <div *ngIf=\"!user.admin\" fxLayout=\"column\" class=\"my2\" fxLayoutAlign=\"center center\">\r\n          <p>Delete my account:</p>\r\n          <button mat-raised-button color=\"warn\" (click)=\"delete()\">\r\n            <mat-icon>delete</mat-icon>\r\n            <span class=\"ml1\">Detail</span>\r\n          </button>\r\n        </div>\r\n        <div fxLayoutAlign=\"space-between center\" class=\"p2 w100\">\r\n\r\n          <p><i>Create at: </i> {{ user.createdAt | date: 'longDate'}}</p>\r\n          <p><i>Last update: </i> {{ user.updatedAt| date: 'longDate'}}</p>\r\n        </div>\r\n      </div>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n",
@@ -2409,10 +2409,10 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "0cd699cff963ddb29df28ef1f6370b94ca485ab4"
+    "hash": "1a995fb08275d21fd3bb0af844d92303b4108ef6"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\not-found\\not-found.component.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\not-found\\not-found.component.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\not-found\\not-found.component.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\not-found\\not-found.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2654,29 +2654,29 @@
       }
     },
     "s": {
-      "0": 152,
-      "1": 152,
-      "2": 6,
-      "3": 152,
-      "4": 12,
-      "5": 6,
-      "6": 6,
-      "7": 6,
-      "8": 152
+      "0": 52,
+      "1": 52,
+      "2": 2,
+      "3": 52,
+      "4": 4,
+      "5": 2,
+      "6": 2,
+      "7": 2,
+      "8": 52
     },
     "f": {
-      "0": 152,
-      "1": 6,
-      "2": 12
+      "0": 52,
+      "1": 2,
+      "2": 4
     },
     "b": {
       "0": [
-        6,
-        6
+        2,
+        2
       ],
       "1": [
-        6,
-        6
+        2,
+        2
       ]
     },
     "inputSourceMap": {
@@ -2693,8 +2693,8 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\not-found\\not-found.component.ts",
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\not-found\\not-found.component.html"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\not-found\\not-found.component.ts",
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\components\\not-found\\not-found.component.html"
       ],
       "sourcesContent": [
         "import { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-not-found',\r\n  templateUrl: './not-found.component.html',\r\n  styleUrls: ['./not-found.component.scss']\r\n})\r\nexport class NotFoundComponent {\r\n}\r\n",
@@ -2702,10 +2702,10 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "e2190a3ae1a54b77cd2609335d112c16ed083496"
+    "hash": "f61d1dd62673ced7b8211413c505686f72eb970c"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\guards\\auth.guard.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\guards\\auth.guard.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\guards\\auth.guard.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\guards\\auth.guard.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -2991,32 +2991,32 @@
       }
     },
     "s": {
-      "0": 152,
-      "1": 103,
-      "2": 103,
-      "3": 134,
+      "0": 52,
+      "1": 35,
+      "2": 35,
+      "3": 46,
       "4": 0,
       "5": 0,
-      "6": 134,
-      "7": 152,
-      "8": 103,
-      "9": 152,
-      "10": 152
+      "6": 46,
+      "7": 52,
+      "8": 35,
+      "9": 52,
+      "10": 52
     },
     "f": {
-      "0": 152,
-      "1": 103,
-      "2": 134,
-      "3": 103
+      "0": 52,
+      "1": 35,
+      "2": 46,
+      "3": 35
     },
     "b": {
       "0": [
         0,
-        134
+        46
       ],
       "1": [
-        103,
-        103
+        35,
+        35
       ]
     },
     "inputSourceMap": {
@@ -3037,17 +3037,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\guards\\auth.guard.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\guards\\auth.guard.ts"
       ],
       "sourcesContent": [
         "import {Injectable} from \"@angular/core\";\r\nimport {CanActivate, Router} from \"@angular/router\"; \r\nimport { SessionService } from \"../services/session.service\";\r\n\r\n@Injectable({providedIn: 'root'})\r\nexport class AuthGuard implements CanActivate {\r\n\r\n  constructor( \r\n    private router: Router,\r\n    private sessionService: SessionService,\r\n  ) {\r\n  }\r\n\r\n  public canActivate(): boolean {\r\n    if (!this.sessionService.isLogged) {\r\n      this.router.navigate(['login']);\r\n      return false;\r\n    }\r\n    return true;\r\n  }\r\n}"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "135fdf2ccdd42972f3a8934cf88ca6b917f0ab72"
+    "hash": "6bd788fd5947f2b5c6f29e9370443c685363f9ff"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\guards\\unauth.guard.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\guards\\unauth.guard.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\guards\\unauth.guard.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\guards\\unauth.guard.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -3333,32 +3333,32 @@
       }
     },
     "s": {
-      "0": 152,
-      "1": 152,
-      "2": 152,
-      "3": 177,
-      "4": 6,
-      "5": 6,
-      "6": 171,
-      "7": 152,
-      "8": 152,
-      "9": 152,
-      "10": 152
+      "0": 52,
+      "1": 52,
+      "2": 52,
+      "3": 61,
+      "4": 2,
+      "5": 2,
+      "6": 59,
+      "7": 52,
+      "8": 52,
+      "9": 52,
+      "10": 52
     },
     "f": {
-      "0": 152,
-      "1": 152,
-      "2": 177,
-      "3": 152
+      "0": 52,
+      "1": 52,
+      "2": 61,
+      "3": 52
     },
     "b": {
       "0": [
-        6,
-        171
+        2,
+        59
       ],
       "1": [
-        152,
-        152
+        52,
+        52
       ]
     },
     "inputSourceMap": {
@@ -3379,17 +3379,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\guards\\unauth.guard.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\guards\\unauth.guard.ts"
       ],
       "sourcesContent": [
         "import {Injectable} from \"@angular/core\";\r\nimport {CanActivate, Router} from \"@angular/router\"; \r\nimport { SessionService } from \"../services/session.service\";\r\n\r\n@Injectable({providedIn: 'root'})\r\nexport class UnauthGuard implements CanActivate {\r\n\r\n  constructor( \r\n    private router: Router,\r\n    private sessionService: SessionService,\r\n  ) {\r\n  }\r\n\r\n  public canActivate(): boolean {\r\n    if (this.sessionService.isLogged) {\r\n      this.router.navigate(['rentals']);\r\n      return false;\r\n    }\r\n    return true;\r\n  }\r\n}"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "da0739e3413b4f9cc024c64b93d0375c9435aac6"
+    "hash": "93596724af81162f7f499445c8454fa273a1f02e"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\app-routing.module.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\app-routing.module.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\app-routing.module.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\app-routing.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -3687,30 +3687,30 @@
       }
     },
     "s": {
-      "0": 152,
-      "1": 152,
-      "2": 152,
-      "3": 103,
-      "4": 103,
-      "5": 152,
-      "6": 152,
-      "7": 152,
-      "8": 152,
-      "9": 152,
-      "10": 152
+      "0": 52,
+      "1": 52,
+      "2": 52,
+      "3": 35,
+      "4": 35,
+      "5": 52,
+      "6": 52,
+      "7": 52,
+      "8": 52,
+      "9": 52,
+      "10": 52
     },
     "f": {
-      "0": 152,
-      "1": 152,
-      "2": 103,
-      "3": 103,
-      "4": 152,
-      "5": 152
+      "0": 52,
+      "1": 52,
+      "2": 35,
+      "3": 35,
+      "4": 52,
+      "5": 52
     },
     "b": {
       "0": [
-        152,
-        152
+        52,
+        52
       ]
     },
     "inputSourceMap": {
@@ -3737,17 +3737,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\app-routing.module.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\app-routing.module.ts"
       ],
       "sourcesContent": [
         "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { MeComponent } from './components/me/me.component';\r\nimport { NotFoundComponent } from './components/not-found/not-found.component';\r\nimport { AuthGuard } from './guards/auth.guard';\r\nimport { UnauthGuard } from './guards/unauth.guard';\r\n\r\nconst routes: Routes = [\r\n  {\r\n    path: '',\r\n    canActivate: [UnauthGuard],\r\n    loadChildren: () => import('./features/auth/auth.module').then(m => m.AuthModule)\r\n  },\r\n  {\r\n    path: 'sessions',\r\n    canActivate: [AuthGuard],\r\n    loadChildren: () => import('./features/sessions/sessions.module').then(m => m.SessionsModule)\r\n  },\r\n  {\r\n    path: 'me',\r\n    canActivate: [AuthGuard],\r\n    component: MeComponent\r\n  },\r\n  { path: '404', component: NotFoundComponent },\r\n  { path: '**', redirectTo: '404' }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule {\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "bfbc839d6ff2f29e487aecc1e3fb2cf2cb92118f"
+    "hash": "4c0b8538b96046b31dd1dda317f5d188bf37408b"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\services\\auth.service.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\services\\auth.service.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\services\\auth.service.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\services\\auth.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -4001,27 +4001,27 @@
       }
     },
     "s": {
-      "0": 152,
-      "1": 152,
-      "2": 152,
-      "3": 12,
-      "4": 109,
-      "5": 152,
-      "6": 152,
-      "7": 152,
-      "8": 152
+      "0": 52,
+      "1": 52,
+      "2": 52,
+      "3": 4,
+      "4": 37,
+      "5": 52,
+      "6": 52,
+      "7": 52,
+      "8": 52
     },
     "f": {
-      "0": 152,
-      "1": 152,
-      "2": 12,
-      "3": 109,
-      "4": 152
+      "0": 52,
+      "1": 52,
+      "2": 4,
+      "3": 37,
+      "4": 52
     },
     "b": {
       "0": [
-        152,
-        152
+        52,
+        52
       ]
     },
     "inputSourceMap": {
@@ -4043,17 +4043,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\services\\auth.service.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\services\\auth.service.ts"
       ],
       "sourcesContent": [
         "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { LoginRequest } from '../interfaces/loginRequest.interface';\r\nimport { RegisterRequest } from '../interfaces/registerRequest.interface';\r\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class AuthService {\r\n\r\n  private pathService = 'api/auth';\r\n\r\n  constructor(private httpClient: HttpClient) { }\r\n\r\n  public register(registerRequest: RegisterRequest): Observable<void> {\r\n    return this.httpClient.post<void>(`${this.pathService}/register`, registerRequest);\r\n  }\r\n\r\n  public login(loginRequest: LoginRequest): Observable<SessionInformation> {\r\n    return this.httpClient.post<SessionInformation>(`${this.pathService}/login`, loginRequest);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "751991839db443ae43100ed6b173a7c62da7e007"
+    "hash": "0af36d0a3c5802040705a209903b7c0ee3dae976"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\app.component.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\app.component.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\app.component.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\app.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -4937,86 +4937,86 @@
       }
     },
     "s": {
-      "0": 2529,
-      "1": 103,
-      "2": 103,
-      "3": 103,
-      "4": 103,
-      "5": 103,
-      "6": 103,
-      "7": 103,
-      "8": 103,
-      "9": 103,
-      "10": 13,
-      "11": 13,
-      "12": 13,
-      "13": 103,
-      "14": 103,
-      "15": 5548,
-      "16": 171,
-      "17": 171,
-      "18": 171,
-      "19": 171,
-      "20": 171,
-      "21": 171,
-      "22": 152,
-      "23": 152,
-      "24": 152,
-      "25": 152,
-      "26": 7803,
-      "27": 13,
-      "28": 13,
-      "29": 152,
-      "30": 152,
-      "31": 152,
-      "32": 7955,
-      "33": 152,
-      "34": 152,
-      "35": 152,
-      "36": 152,
-      "37": 152,
-      "38": 152,
-      "39": 152,
-      "40": 152,
-      "41": 152,
-      "42": 152,
-      "43": 7955,
-      "44": 7803,
-      "45": 7803,
-      "46": 7803,
-      "47": 152
+      "0": 852,
+      "1": 35,
+      "2": 35,
+      "3": 35,
+      "4": 35,
+      "5": 35,
+      "6": 35,
+      "7": 35,
+      "8": 35,
+      "9": 35,
+      "10": 5,
+      "11": 5,
+      "12": 5,
+      "13": 35,
+      "14": 35,
+      "15": 1884,
+      "16": 59,
+      "17": 59,
+      "18": 59,
+      "19": 59,
+      "20": 59,
+      "21": 59,
+      "22": 52,
+      "23": 52,
+      "24": 52,
+      "25": 52,
+      "26": 2642,
+      "27": 5,
+      "28": 5,
+      "29": 52,
+      "30": 52,
+      "31": 52,
+      "32": 2694,
+      "33": 52,
+      "34": 52,
+      "35": 52,
+      "36": 52,
+      "37": 52,
+      "38": 52,
+      "39": 52,
+      "40": 52,
+      "41": 52,
+      "42": 52,
+      "43": 2694,
+      "44": 2642,
+      "45": 2642,
+      "46": 2642,
+      "47": 52
     },
     "f": {
-      "0": 2529,
-      "1": 13,
-      "2": 5548,
-      "3": 152,
-      "4": 152,
-      "5": 7803,
-      "6": 13,
-      "7": 152,
-      "8": 7955
+      "0": 852,
+      "1": 5,
+      "2": 1884,
+      "3": 52,
+      "4": 52,
+      "5": 2642,
+      "6": 5,
+      "7": 52,
+      "8": 2694
     },
     "b": {
       "0": [
-        103,
-        2426
+        35,
+        817
       ],
       "1": [
-        171,
-        5377
+        59,
+        1825
       ],
       "2": [
-        152,
-        152
+        52,
+        52
       ],
       "3": [
-        152,
-        7803
+        52,
+        2642
       ],
       "4": [
-        7803,
-        152
+        2642,
+        52
       ]
     },
     "inputSourceMap": {
@@ -5042,8 +5042,8 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\app.component.html",
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\app.component.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\app.component.html",
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\app.component.ts"
       ],
       "sourcesContent": [
         "<div class=\"app\">\r\n  <mat-toolbar color=\"primary\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n    <span>Yoga app</span>\r\n    <div *ngIf=\"$isLogged() | async; else notLogged\">\r\n      <span routerLink=\"sessions\" class=\"link\">Sessions</span>\r\n      <span routerLink=\"me\" class=\"link\">Account</span>\r\n      <span (click)=\"logout()\" class=\"link\">Logout</span>\r\n    </div>\r\n    <ng-template #notLogged>\r\n      <div>\r\n        <span routerLink=\"login\" class=\"link\">Login</span>\r\n        <span routerLink=\"register\" class=\"link\">Register</span>\r\n      </div>\r\n    </ng-template>\r\n  </mat-toolbar>\r\n  <div>\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n",
@@ -5051,10 +5051,10 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "a0096967cc876ee51e027003320502dfe33a2d2e"
+    "hash": "e49dfee413bb5dc450667ff558836b05603a6610"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\interceptors\\jwt.interceptor.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\interceptors\\jwt.interceptor.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\interceptors\\jwt.interceptor.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\interceptors\\jwt.interceptor.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5320,30 +5320,30 @@
       }
     },
     "s": {
-      "0": 152,
-      "1": 121,
-      "2": 381,
-      "3": 260,
-      "4": 381,
-      "5": 152,
-      "6": 121,
-      "7": 152,
-      "8": 152
+      "0": 52,
+      "1": 41,
+      "2": 129,
+      "3": 88,
+      "4": 129,
+      "5": 52,
+      "6": 41,
+      "7": 52,
+      "8": 52
     },
     "f": {
-      "0": 152,
-      "1": 121,
-      "2": 381,
-      "3": 121
+      "0": 52,
+      "1": 41,
+      "2": 129,
+      "3": 41
     },
     "b": {
       "0": [
-        260,
-        121
+        88,
+        41
       ],
       "1": [
-        121,
-        121
+        41,
+        41
       ]
     },
     "inputSourceMap": {
@@ -5371,17 +5371,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\interceptors\\jwt.interceptor.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\interceptors\\jwt.interceptor.ts"
       ],
       "sourcesContent": [
         "import { HttpHandler, HttpInterceptor, HttpRequest } from \"@angular/common/http\";\r\nimport { Injectable } from \"@angular/core\";\r\nimport { SessionService } from '../services/session.service';\r\n\r\n@Injectable({ providedIn: 'root' })\r\nexport class JwtInterceptor implements HttpInterceptor {\r\n  constructor(private sessionService: SessionService) {}\r\n\r\n  public intercept(request: HttpRequest<any>, next: HttpHandler) {\r\n    if (this.sessionService.isLogged) {\r\n      request = request.clone({\r\n        setHeaders: {\r\n          Authorization: `Bearer ${this.sessionService.sessionInformation!.token}`,\r\n        },\r\n      });\r\n    }\r\n    return next.handle(request);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "80b0804cca61986648e3145eab481573a79a71b7"
+    "hash": "522cb1a043b123798a7a26530b82f567c01d9396"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\app.module.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\app.module.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\app.module.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\app.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5543,22 +5543,22 @@
       }
     },
     "s": {
-      "0": 152,
-      "1": 152,
-      "2": 152,
-      "3": 152,
-      "4": 152,
-      "5": 152,
-      "6": 152
+      "0": 52,
+      "1": 52,
+      "2": 52,
+      "3": 52,
+      "4": 52,
+      "5": 52,
+      "6": 52
     },
     "f": {
-      "0": 152,
-      "1": 152
+      "0": 52,
+      "1": 52
     },
     "b": {
       "0": [
-        152,
-        152
+        52,
+        52
       ]
     },
     "inputSourceMap": {
@@ -5588,17 +5588,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\app.module.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\app.module.ts"
       ],
       "sourcesContent": [
         "import { NgModule } from '@angular/core';\r\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\r\nimport { NotFoundComponent } from './components/not-found/not-found.component';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatToolbarModule } from '@angular/material/toolbar';\r\nimport { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';\r\nimport { JwtInterceptor } from './interceptors/jwt.interceptor';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { FlexLayoutModule } from '@angular/flex-layout';\r\nimport { MeComponent } from './components/me/me.component';\r\n\r\nconst materialModule = [\r\n  MatButtonModule,\r\n  MatCardModule,\r\n  MatIconModule,\r\n  MatSnackBarModule,\r\n  MatToolbarModule,\r\n]\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    NotFoundComponent,\r\n    MeComponent,\r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    BrowserAnimationsModule, \r\n    FlexLayoutModule,\r\n    HttpClientModule,\r\n    ...materialModule\r\n  ],\r\n  providers: [\r\n    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },\r\n  ],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "4a56f3547ec698ceb9f0c41ceb844e0721750565"
+    "hash": "a638c0a8302b8ff8bcd536fc78bbdcf716220e05"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\environments\\environment.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\environments\\environment.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\environments\\environment.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\environments\\environment.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5614,7 +5614,7 @@
     "fnMap": {},
     "branchMap": {},
     "s": {
-      "0": 152
+      "0": 52
     },
     "f": {},
     "b": {},
@@ -5628,17 +5628,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\environments\\environment.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\environments\\environment.ts"
       ],
       "sourcesContent": [
         "export const environment = {\r\n  baseUrl: 'localhost:8080/api/',\r\n  production: false\r\n};\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "cc35309af55fa633875d8278343c4fb08423fca6"
+    "hash": "80ffa1bc3c1c5bf2fdae71e8e6e2c01948abf65e"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\main.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\main.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\main.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\main.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -5746,9 +5746,9 @@
       }
     },
     "s": {
-      "0": 152,
+      "0": 52,
       "1": 0,
-      "2": 152,
+      "2": 52,
       "3": 0
     },
     "f": {
@@ -5757,7 +5757,7 @@
     "b": {
       "0": [
         0,
-        152
+        52
       ]
     },
     "inputSourceMap": {
@@ -5777,17 +5777,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\main.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\main.ts"
       ],
       "sourcesContent": [
         "import { enableProdMode } from '@angular/core';\r\nimport { platformBrowserDynamic } from '@angular/platform-browser-dynamic';\r\n\r\nimport { AppModule } from './app/app.module';\r\nimport { environment } from './environments/environment';\r\n\r\nif (environment.production) {\r\n  enableProdMode();\r\n}\r\n\r\nplatformBrowserDynamic().bootstrapModule(AppModule)\r\n  .catch(err => console.error(err));\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "74801b2c00bb4c7a51638561d624f481939dc614"
+    "hash": "fede640d8836a4a46ee5c17af39e940a37da6fc1"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -6865,103 +6865,103 @@
       }
     },
     "s": {
-      "0": 18,
-      "1": 6,
-      "2": 6,
-      "3": 6,
-      "4": 152,
-      "5": 134,
-      "6": 134,
-      "7": 134,
-      "8": 134,
-      "9": 134,
-      "10": 134,
-      "11": 134,
-      "12": 134,
-      "13": 109,
-      "14": 109,
-      "15": 103,
-      "16": 103,
-      "17": 103,
-      "18": 6,
-      "19": 152,
-      "20": 134,
-      "21": 152,
-      "22": 4319,
-      "23": 134,
-      "24": 134,
-      "25": 134,
-      "26": 134,
-      "27": 134,
-      "28": 109,
-      "29": 134,
-      "30": 134,
-      "31": 134,
-      "32": 134,
-      "33": 134,
-      "34": 134,
-      "35": 134,
-      "36": 14,
-      "37": 134,
-      "38": 134,
-      "39": 134,
-      "40": 134,
-      "41": 134,
-      "42": 134,
-      "43": 134,
-      "44": 134,
-      "45": 4319,
-      "46": 4185,
-      "47": 4185,
-      "48": 4185,
-      "49": 4185,
-      "50": 4185,
-      "51": 4185,
-      "52": 4185,
-      "53": 4185,
-      "54": 4185,
-      "55": 4185,
-      "56": 4185,
-      "57": 4185,
-      "58": 152
+      "0": 6,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 52,
+      "5": 46,
+      "6": 46,
+      "7": 46,
+      "8": 46,
+      "9": 46,
+      "10": 46,
+      "11": 46,
+      "12": 46,
+      "13": 37,
+      "14": 37,
+      "15": 35,
+      "16": 35,
+      "17": 35,
+      "18": 2,
+      "19": 52,
+      "20": 46,
+      "21": 52,
+      "22": 1467,
+      "23": 46,
+      "24": 46,
+      "25": 46,
+      "26": 46,
+      "27": 46,
+      "28": 37,
+      "29": 46,
+      "30": 46,
+      "31": 46,
+      "32": 46,
+      "33": 46,
+      "34": 46,
+      "35": 46,
+      "36": 6,
+      "37": 46,
+      "38": 46,
+      "39": 46,
+      "40": 46,
+      "41": 46,
+      "42": 46,
+      "43": 46,
+      "44": 46,
+      "45": 1467,
+      "46": 1421,
+      "47": 1421,
+      "48": 1421,
+      "49": 1421,
+      "50": 1421,
+      "51": 1421,
+      "52": 1421,
+      "53": 1421,
+      "54": 1421,
+      "55": 1421,
+      "56": 1421,
+      "57": 1421,
+      "58": 52
     },
     "f": {
-      "0": 18,
-      "1": 152,
-      "2": 134,
-      "3": 109,
-      "4": 103,
-      "5": 103,
-      "6": 6,
-      "7": 134,
-      "8": 4319,
-      "9": 109,
-      "10": 14
+      "0": 6,
+      "1": 52,
+      "2": 46,
+      "3": 37,
+      "4": 35,
+      "5": 35,
+      "6": 2,
+      "7": 46,
+      "8": 1467,
+      "9": 37,
+      "10": 6
     },
     "b": {
       "0": [
-        6,
-        12
+        2,
+        4
       ],
       "1": [
-        134,
-        134
+        46,
+        46
       ],
       "2": [
-        134,
-        4185
+        46,
+        1421
       ],
       "3": [
-        4185,
-        134
+        1421,
+        46
       ],
       "4": [
-        4171,
-        14
+        1415,
+        6
       ],
       "5": [
-        4171,
-        14
+        1415,
+        6
       ]
     },
     "inputSourceMap": {
@@ -7004,8 +7004,8 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts",
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\login\\login.component.html"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\login\\login.component.ts",
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\login\\login.component.html"
       ],
       "sourcesContent": [
         "import { Component } from '@angular/core';\r\nimport { FormBuilder, Validators } from '@angular/forms';\r\nimport { Router } from '@angular/router';\r\nimport { NgZone } from '@angular/core';\r\nimport { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';\r\nimport { SessionService } from 'src/app/services/session.service';\r\nimport { LoginRequest } from '../../interfaces/loginRequest.interface';\r\nimport { AuthService } from '../../services/auth.service';\r\n\r\n@Component({\r\n  selector: 'app-login',\r\n  templateUrl: './login.component.html',\r\n  styleUrls: ['./login.component.scss']\r\n})\r\nexport class LoginComponent {\r\n  public hide = true;\r\n  public onError = false;\r\n\r\n  public form = this.fb.group({\r\n    email: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.email\r\n      ]\r\n    ],\r\n    password: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.min(3)\r\n      ]\r\n    ]\r\n  });\r\n\r\n  constructor(\r\n    private authService: AuthService,\r\n    private fb: FormBuilder,\r\n    private router: Router,\r\n    private sessionService: SessionService,\r\n    private ngZone: NgZone // Inject NgZone here\r\n  ) {}\r\n\r\n  public submit(): void {\r\n    const loginRequest = this.form.value as LoginRequest;\r\n    this.authService.login(loginRequest).subscribe({\r\n      next: (response: SessionInformation) => {\r\n        this.sessionService.logIn(response);\r\n        this.ngZone.run(() => { // Wrap the navigation call with ngZone.run\r\n          this.router.navigate(['/sessions']);\r\n        });\r\n      },\r\n      error: error => this.onError = true,\r\n    });\r\n  }\r\n}",
@@ -7013,10 +7013,10 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "19dcd68cae790e61d4b280ca20ce75ebc0eb5562"
+    "hash": "cb7a700d1d5bf842b2bf9f77f10fbcf4590f8ef5"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -7918,86 +7918,86 @@
       }
     },
     "s": {
-      "0": 18,
-      "1": 6,
-      "2": 6,
-      "3": 6,
-      "4": 152,
-      "5": 38,
-      "6": 38,
-      "7": 38,
-      "8": 38,
-      "9": 38,
-      "10": 38,
-      "11": 12,
-      "12": 12,
-      "13": 6,
-      "14": 6,
-      "15": 6,
-      "16": 152,
-      "17": 38,
-      "18": 152,
-      "19": 797,
-      "20": 38,
-      "21": 38,
-      "22": 38,
-      "23": 38,
-      "24": 38,
-      "25": 12,
-      "26": 38,
-      "27": 38,
-      "28": 38,
-      "29": 38,
-      "30": 38,
-      "31": 38,
-      "32": 38,
-      "33": 38,
-      "34": 38,
-      "35": 38,
-      "36": 38,
-      "37": 38,
-      "38": 38,
-      "39": 38,
-      "40": 38,
-      "41": 38,
-      "42": 38,
-      "43": 797,
-      "44": 759,
-      "45": 759,
-      "46": 759,
-      "47": 759,
-      "48": 759,
-      "49": 759,
-      "50": 152
+      "0": 6,
+      "1": 2,
+      "2": 2,
+      "3": 2,
+      "4": 52,
+      "5": 14,
+      "6": 14,
+      "7": 14,
+      "8": 14,
+      "9": 14,
+      "10": 14,
+      "11": 4,
+      "12": 4,
+      "13": 2,
+      "14": 2,
+      "15": 2,
+      "16": 52,
+      "17": 14,
+      "18": 52,
+      "19": 269,
+      "20": 14,
+      "21": 14,
+      "22": 14,
+      "23": 14,
+      "24": 14,
+      "25": 4,
+      "26": 14,
+      "27": 14,
+      "28": 14,
+      "29": 14,
+      "30": 14,
+      "31": 14,
+      "32": 14,
+      "33": 14,
+      "34": 14,
+      "35": 14,
+      "36": 14,
+      "37": 14,
+      "38": 14,
+      "39": 14,
+      "40": 14,
+      "41": 14,
+      "42": 14,
+      "43": 269,
+      "44": 255,
+      "45": 255,
+      "46": 255,
+      "47": 255,
+      "48": 255,
+      "49": 255,
+      "50": 52
     },
     "f": {
-      "0": 18,
-      "1": 152,
-      "2": 38,
-      "3": 12,
-      "4": 6,
-      "5": 6,
-      "6": 6,
-      "7": 38,
-      "8": 797,
-      "9": 12
+      "0": 6,
+      "1": 52,
+      "2": 14,
+      "3": 4,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 14,
+      "8": 269,
+      "9": 4
     },
     "b": {
       "0": [
-        6,
-        12
+        2,
+        4
       ],
       "1": [
-        38,
-        38
+        14,
+        14
       ],
       "2": [
-        38,
-        759
+        14,
+        255
       ],
       "3": [
-        759,
-        38
+        255,
+        14
       ]
     },
     "inputSourceMap": {
@@ -8041,8 +8041,8 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts",
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\register\\register.component.html"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\register\\register.component.ts",
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\components\\register\\register.component.html"
       ],
       "sourcesContent": [
         "import { Component } from '@angular/core';\r\nimport { FormBuilder, Validators } from '@angular/forms';\r\nimport { Router } from '@angular/router';\r\nimport { NgZone } from '@angular/core';\r\nimport { AuthService } from '../../services/auth.service';\r\nimport { RegisterRequest } from '../../interfaces/registerRequest.interface';\r\n\r\n@Component({\r\n  selector: 'app-register',\r\n  templateUrl: './register.component.html',\r\n  styleUrls: ['./register.component.scss']\r\n})\r\nexport class RegisterComponent {\r\n\r\n  public onError = false;\r\n\r\n  public form = this.fb.group({\r\n    email: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.email\r\n      ]\r\n    ],\r\n    firstName: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.minLength(3),\r\n        Validators.maxLength(20)\r\n      ]\r\n    ],\r\n    lastName: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.minLength(3),\r\n        Validators.maxLength(20)\r\n      ]\r\n    ],\r\n    password: [\r\n      '',\r\n      [\r\n        Validators.required,\r\n        Validators.minLength(3),\r\n        Validators.maxLength(40)\r\n      ]\r\n    ]\r\n  });\r\n\r\n  constructor(\r\n    private authService: AuthService,\r\n    private fb: FormBuilder,\r\n    private router: Router,\r\n    private ngZone: NgZone // Inject NgZone here\r\n  ) {}\r\n\r\n  public submit(): void {\r\n    const registerRequest = this.form.value as RegisterRequest;\r\n    this.authService.register(registerRequest).subscribe({\r\n      next: (_: void) => {\r\n        this.ngZone.run(() => { // Wrap the navigation call with ngZone.run\r\n          this.router.navigate(['/login']);\r\n        });\r\n      },\r\n      error: _ => this.onError = true,\r\n    });\r\n  }\r\n}\r\n",
@@ -8050,10 +8050,10 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "af0129f8466ee210c535940c4fa547b4bdb39d9f"
+    "hash": "5045a5e27183651cdd73babeb67a8d15d391b20f"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\auth-routing.module.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\auth-routing.module.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\auth-routing.module.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\auth-routing.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -8215,22 +8215,22 @@
       }
     },
     "s": {
-      "0": 152,
-      "1": 152,
-      "2": 152,
-      "3": 152,
-      "4": 152,
-      "5": 152,
-      "6": 152
+      "0": 52,
+      "1": 52,
+      "2": 52,
+      "3": 52,
+      "4": 52,
+      "5": 52,
+      "6": 52
     },
     "f": {
-      "0": 152,
-      "1": 152
+      "0": 52,
+      "1": 52
     },
     "b": {
       "0": [
-        152,
-        152
+        52,
+        52
       ]
     },
     "inputSourceMap": {
@@ -8249,17 +8249,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\auth-routing.module.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\auth-routing.module.ts"
       ],
       "sourcesContent": [
         "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { LoginComponent } from './components/login/login.component';\r\nimport { RegisterComponent } from './components/register/register.component';\r\n\r\n\r\nconst routes: Routes = [\r\n  { title: 'Login', path: 'login', component: LoginComponent },\r\n  { title: 'Register', path: 'register', component: RegisterComponent }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forChild(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AuthRoutingModule { }\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "185470ebde56eff971d71735b4d551568581124e"
+    "hash": "c9fbc0794ad1545fca06bb99ed38e5f354a6ca76"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\auth.module.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\auth.module.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\auth.module.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\auth.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -8421,22 +8421,22 @@
       }
     },
     "s": {
-      "0": 152,
-      "1": 152,
-      "2": 152,
-      "3": 152,
-      "4": 152,
-      "5": 152,
-      "6": 152
+      "0": 52,
+      "1": 52,
+      "2": 52,
+      "3": 52,
+      "4": 52,
+      "5": 52,
+      "6": 52
     },
     "f": {
-      "0": 152,
-      "1": 152
+      "0": 52,
+      "1": 52
     },
     "b": {
       "0": [
-        152,
-        152
+        52,
+        52
       ]
     },
     "inputSourceMap": {
@@ -8458,17 +8458,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\auth.module.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\auth\\auth.module.ts"
       ],
       "sourcesContent": [
         "import { NgModule } from '@angular/core';\r\nimport { CommonModule } from '@angular/common';\r\nimport { AuthRoutingModule } from './auth-routing.module';\r\nimport { RegisterComponent } from './components/register/register.component';\r\nimport { LoginComponent } from './components/login/login.component';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { FlexLayoutModule } from '@angular/flex-layout';\r\nimport { FormsModule, ReactiveFormsModule } from '@angular/forms';\r\nimport { MatIconModule } from '@angular/material/icon';\r\n\r\nconst materialModules = [\r\n  MatButtonModule,\r\n  MatCardModule,\r\n  MatFormFieldModule,\r\n  MatIconModule,\r\n  MatInputModule\r\n]\r\n\r\n@NgModule({\r\n  declarations: [\r\n    RegisterComponent,\r\n    LoginComponent\r\n  ],\r\n  imports: [\r\n    AuthRoutingModule,\r\n    CommonModule,\r\n    FlexLayoutModule,\r\n    FormsModule,\r\n    ReactiveFormsModule,\r\n    ...materialModules\r\n  ]\r\n})\r\nexport class AuthModule { }\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "7125665d65897fbf0c4ee7e8115e75c292f1c59f"
+    "hash": "4d2e637075dcf879b68a472a557827d7a2a5fa06"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\services\\session-api.service.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\services\\session-api.service.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\services\\session-api.service.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\services\\session-api.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -8892,37 +8892,37 @@
       }
     },
     "s": {
-      "0": 103,
-      "1": 103,
-      "2": 103,
-      "3": 127,
-      "4": 36,
-      "5": 6,
-      "6": 6,
-      "7": 6,
+      "0": 35,
+      "1": 35,
+      "2": 35,
+      "3": 43,
+      "4": 12,
+      "5": 2,
+      "6": 2,
+      "7": 2,
       "8": 0,
       "9": 0,
-      "10": 103,
-      "11": 103,
-      "12": 103,
-      "13": 103
+      "10": 35,
+      "11": 35,
+      "12": 35,
+      "13": 35
     },
     "f": {
-      "0": 103,
-      "1": 103,
-      "2": 127,
-      "3": 36,
-      "4": 6,
-      "5": 6,
-      "6": 6,
+      "0": 35,
+      "1": 35,
+      "2": 43,
+      "3": 12,
+      "4": 2,
+      "5": 2,
+      "6": 2,
       "7": 0,
       "8": 0,
-      "9": 103
+      "9": 35
     },
     "b": {
       "0": [
-        103,
-        103
+        35,
+        35
       ]
     },
     "inputSourceMap": {
@@ -8952,17 +8952,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\services\\session-api.service.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\services\\session-api.service.ts"
       ],
       "sourcesContent": [
         "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { Session } from '../interfaces/session.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class SessionApiService {\r\n\r\n  private pathService = 'api/session';\r\n\r\n  constructor(private httpClient: HttpClient) {\r\n  }\r\n\r\n  public all(): Observable<Session[]> {\r\n    return this.httpClient.get<Session[]>(this.pathService);\r\n  }\r\n\r\n  public detail(id: string): Observable<Session> {\r\n    return this.httpClient.get<Session>(`${this.pathService}/${id}`);\r\n  }\r\n\r\n  public delete(id: string): Observable<any> {\r\n    return this.httpClient.delete(`${this.pathService}/${id}`);\r\n  }\r\n\r\n  public create(session: Session): Observable<Session> {\r\n    return this.httpClient.post<Session>(this.pathService, session);\r\n  }\r\n\r\n  public update(id: string, session: Session): Observable<Session> {\r\n    return this.httpClient.put<Session>(`${this.pathService}/${id}`, session);\r\n  }\r\n\r\n  public participate(id: string, userId: string): Observable<void> {\r\n    return this.httpClient.post<void>(`${this.pathService}/${id}/participate/${userId}`, null);\r\n  }\r\n\r\n  public unParticipate(id: string, userId: string): Observable<void> {\r\n    return this.httpClient.delete<void>(`${this.pathService}/${id}/participate/${userId}`);\r\n  }\r\n\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "583845bd5eda4b305f0b7aea7bf950cc2d737602"
+    "hash": "d7b87cf6107e1453a574b06a0623c479eb7595bf"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\teacher.service.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\teacher.service.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\teacher.service.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\teacher.service.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -9216,27 +9216,27 @@
       }
     },
     "s": {
-      "0": 103,
-      "1": 48,
-      "2": 48,
-      "3": 30,
-      "4": 18,
-      "5": 103,
-      "6": 48,
-      "7": 103,
-      "8": 103
+      "0": 35,
+      "1": 16,
+      "2": 16,
+      "3": 10,
+      "4": 6,
+      "5": 35,
+      "6": 16,
+      "7": 35,
+      "8": 35
     },
     "f": {
-      "0": 103,
-      "1": 48,
-      "2": 30,
-      "3": 18,
-      "4": 48
+      "0": 35,
+      "1": 16,
+      "2": 10,
+      "3": 6,
+      "4": 16
     },
     "b": {
       "0": [
-        48,
-        48
+        16,
+        16
       ]
     },
     "inputSourceMap": {
@@ -9257,17 +9257,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\teacher.service.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\services\\teacher.service.ts"
       ],
       "sourcesContent": [
         "import { HttpClient } from '@angular/common/http';\r\nimport { Injectable } from '@angular/core';\r\nimport { Observable } from 'rxjs';\r\nimport { Teacher } from '../interfaces/teacher.interface';\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class TeacherService {\r\n\r\n  private pathService = 'api/teacher';\r\n\r\n  constructor(private httpClient: HttpClient) { }\r\n\r\n  public all(): Observable<Teacher[]> {\r\n    return this.httpClient.get<Teacher[]>(this.pathService);\r\n  }\r\n\r\n  public detail(id: string): Observable<Teacher> {\r\n    return this.httpClient.get<Teacher>(`${this.pathService}/${id}`);\r\n  }\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "0730a712ab6cfc2e6db6146e78b6da44ce78d41d"
+    "hash": "fe93f75ea5f86452d9ad16cd14f28136cad57b5e"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -12071,19 +12071,19 @@
       }
     },
     "s": {
-      "0": 96,
-      "1": 18,
-      "2": 18,
-      "3": 18,
-      "4": 6,
-      "5": 6,
-      "6": 6,
-      "7": 18,
-      "8": 18,
-      "9": 18,
-      "10": 18,
-      "11": 18,
-      "12": 18,
+      "0": 32,
+      "1": 6,
+      "2": 6,
+      "3": 6,
+      "4": 2,
+      "5": 2,
+      "6": 2,
+      "7": 6,
+      "8": 6,
+      "9": 6,
+      "10": 6,
+      "11": 6,
+      "12": 6,
       "13": 0,
       "14": 0,
       "15": 0,
@@ -12121,163 +12121,163 @@
       "47": 0,
       "48": 0,
       "49": 0,
-      "50": 60,
-      "51": 18,
-      "52": 18,
-      "53": 18,
-      "54": 18,
-      "55": 18,
-      "56": 18,
-      "57": 18,
-      "58": 60,
-      "59": 42,
-      "60": 42,
-      "61": 42,
-      "62": 96,
-      "63": 18,
-      "64": 18,
-      "65": 18,
+      "50": 20,
+      "51": 6,
+      "52": 6,
+      "53": 6,
+      "54": 6,
+      "55": 6,
+      "56": 6,
+      "57": 6,
+      "58": 20,
+      "59": 14,
+      "60": 14,
+      "61": 14,
+      "62": 32,
+      "63": 6,
+      "64": 6,
+      "65": 6,
       "66": 0,
       "67": 0,
       "68": 0,
-      "69": 18,
-      "70": 18,
-      "71": 18,
-      "72": 18,
-      "73": 18,
-      "74": 18,
-      "75": 18,
-      "76": 18,
-      "77": 18,
-      "78": 18,
-      "79": 18,
-      "80": 18,
-      "81": 18,
-      "82": 18,
-      "83": 18,
-      "84": 18,
-      "85": 18,
-      "86": 18,
-      "87": 18,
-      "88": 18,
-      "89": 18,
-      "90": 18,
-      "91": 18,
-      "92": 18,
-      "93": 18,
-      "94": 18,
-      "95": 18,
-      "96": 18,
-      "97": 18,
-      "98": 18,
-      "99": 18,
-      "100": 18,
-      "101": 18,
-      "102": 18,
-      "103": 18,
-      "104": 18,
-      "105": 18,
-      "106": 18,
-      "107": 18,
-      "108": 18,
-      "109": 18,
-      "110": 18,
-      "111": 18,
-      "112": 18,
-      "113": 18,
-      "114": 18,
-      "115": 96,
-      "116": 78,
-      "117": 78,
-      "118": 78,
-      "119": 78,
-      "120": 78,
-      "121": 78,
-      "122": 78,
-      "123": 78,
-      "124": 78,
-      "125": 78,
-      "126": 78,
-      "127": 78,
-      "128": 78,
-      "129": 78,
-      "130": 78,
-      "131": 78,
-      "132": 78,
-      "133": 78,
-      "134": 78,
-      "135": 103,
-      "136": 18,
-      "137": 18,
-      "138": 18,
-      "139": 18,
-      "140": 18,
-      "141": 18,
-      "142": 18,
-      "143": 18,
-      "144": 18,
-      "145": 18,
-      "146": 18,
-      "147": 18,
-      "148": 18,
+      "69": 6,
+      "70": 6,
+      "71": 6,
+      "72": 6,
+      "73": 6,
+      "74": 6,
+      "75": 6,
+      "76": 6,
+      "77": 6,
+      "78": 6,
+      "79": 6,
+      "80": 6,
+      "81": 6,
+      "82": 6,
+      "83": 6,
+      "84": 6,
+      "85": 6,
+      "86": 6,
+      "87": 6,
+      "88": 6,
+      "89": 6,
+      "90": 6,
+      "91": 6,
+      "92": 6,
+      "93": 6,
+      "94": 6,
+      "95": 6,
+      "96": 6,
+      "97": 6,
+      "98": 6,
+      "99": 6,
+      "100": 6,
+      "101": 6,
+      "102": 6,
+      "103": 6,
+      "104": 6,
+      "105": 6,
+      "106": 6,
+      "107": 6,
+      "108": 6,
+      "109": 6,
+      "110": 6,
+      "111": 6,
+      "112": 6,
+      "113": 6,
+      "114": 6,
+      "115": 32,
+      "116": 26,
+      "117": 26,
+      "118": 26,
+      "119": 26,
+      "120": 26,
+      "121": 26,
+      "122": 26,
+      "123": 26,
+      "124": 26,
+      "125": 26,
+      "126": 26,
+      "127": 26,
+      "128": 26,
+      "129": 26,
+      "130": 26,
+      "131": 26,
+      "132": 26,
+      "133": 26,
+      "134": 26,
+      "135": 35,
+      "136": 6,
+      "137": 6,
+      "138": 6,
+      "139": 6,
+      "140": 6,
+      "141": 6,
+      "142": 6,
+      "143": 6,
+      "144": 6,
+      "145": 6,
+      "146": 6,
+      "147": 6,
+      "148": 6,
       "149": 0,
-      "150": 6,
-      "151": 6,
-      "152": 6,
+      "150": 2,
+      "151": 2,
+      "152": 2,
       "153": 0,
       "154": 0,
       "155": 0,
       "156": 0,
-      "157": 18,
-      "158": 18,
-      "159": 18,
-      "160": 18,
-      "161": 18,
-      "162": 18,
-      "163": 103,
-      "164": 18,
-      "165": 103,
-      "166": 114,
-      "167": 18,
-      "168": 18,
-      "169": 18,
-      "170": 114,
-      "171": 96,
-      "172": 96,
-      "173": 103
+      "157": 6,
+      "158": 6,
+      "159": 6,
+      "160": 6,
+      "161": 6,
+      "162": 6,
+      "163": 35,
+      "164": 6,
+      "165": 35,
+      "166": 38,
+      "167": 6,
+      "168": 6,
+      "169": 6,
+      "170": 38,
+      "171": 32,
+      "172": 32,
+      "173": 35
     },
     "f": {
-      "0": 96,
-      "1": 6,
+      "0": 32,
+      "1": 2,
       "2": 0,
       "3": 0,
       "4": 0,
       "5": 0,
       "6": 0,
-      "7": 60,
-      "8": 96,
+      "7": 20,
+      "8": 32,
       "9": 0,
-      "10": 103,
-      "11": 18,
-      "12": 18,
+      "10": 35,
+      "11": 6,
+      "12": 6,
       "13": 0,
-      "14": 6,
-      "15": 6,
+      "14": 2,
+      "15": 2,
       "16": 0,
       "17": 0,
       "18": 0,
       "19": 0,
-      "20": 18,
-      "21": 18,
-      "22": 18,
-      "23": 18,
-      "24": 18,
-      "25": 114
+      "20": 6,
+      "21": 6,
+      "22": 6,
+      "23": 6,
+      "24": 6,
+      "25": 38
     },
     "b": {
       "0": [
-        18,
-        78
+        6,
+        26
       ],
       "1": [
         0,
@@ -12296,32 +12296,32 @@
         0
       ],
       "5": [
-        18,
-        42
+        6,
+        14
       ],
       "6": [
-        42,
-        18
+        14,
+        6
       ],
       "7": [
-        18,
-        78
+        6,
+        26
       ],
       "8": [
-        78,
-        18
+        26,
+        6
       ],
       "9": [
-        18,
-        18
+        6,
+        6
       ],
       "10": [
-        18,
-        96
+        6,
+        32
       ],
       "11": [
-        96,
-        18
+        32,
+        6
       ]
     },
     "inputSourceMap": {
@@ -12377,8 +12377,8 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.html",
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.html",
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\detail\\detail.component.ts"
       ],
       "sourcesContent": [
         "<div class=\"m3\">\r\n  <mat-card *ngIf=\"session\">\r\n    <mat-card-title>\r\n      <div fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div fxLayout=\"row\" fxLayoutAlign=\"start center\">\r\n          <button mat-icon-button (click)=\"back()\">\r\n            <mat-icon>arrow_back</mat-icon>\r\n          </button>\r\n          <h1>{{session.name | titlecase}}</h1>\r\n        </div>\r\n        <div>\r\n          <button *ngIf=\"isAdmin\" mat-raised-button color=\"warn\" (click)=\"delete()\">\r\n            <mat-icon>delete</mat-icon>\r\n            <span class=\"ml1\">Delete</span>\r\n          </button>\r\n          <div *ngIf=\"!isAdmin\">\r\n            <button *ngIf=\"!isParticipate\" mat-raised-button color=\"primary\" (click)=\"participate()\">\r\n              <mat-icon>person_add</mat-icon>\r\n              <span class=\"ml1\">Participate</span>\r\n            </button>\r\n            <button *ngIf=\"isParticipate\" mat-raised-button color=\"warn\" (click)=\"unParticipate()\">\r\n              <mat-icon>person_remove</mat-icon>\r\n              <span class=\"ml1\">Do not participate</span>\r\n            </button>\r\n\r\n          </div>\r\n\r\n\r\n        </div>\r\n      </div>\r\n    </mat-card-title>\r\n    <mat-card-subtitle *ngIf=\"teacher\">\r\n      <div fxLayoutAlign=\"start center\" class=\"ml3\">\r\n        <mat-icon>\r\n          people\r\n        </mat-icon>\r\n        <span class=\"ml1\">{{ teacher.firstName }} {{ teacher.lastName | uppercase }}</span>\r\n      </div>\r\n    </mat-card-subtitle>\r\n    <div mat-card-image fxLayoutAlign=\"center center\">\r\n      <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\r\n    </div>\r\n    <mat-card-content>\r\n      <div class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div fxLayoutAlign=\"start center\">\r\n          <mat-icon>\r\n            group\r\n          </mat-icon>\r\n          <span class=\"ml1\">{{ session.users.length }} attendees</span>\r\n        </div>\r\n        <div fxLayoutAlign=\"start center\">\r\n          <mat-icon>\r\n            calendar_month\r\n          </mat-icon>\r\n          <span class=\"ml1\">{{ session.date | date: 'longDate'}}</span>\r\n        </div>\r\n      </div>\r\n      <div class=\"description\">\r\n        <p>Description:</p>\r\n        {{ session.description }}\r\n        <br>\r\n      </div>\r\n      <div class=\"date\" class=\"my2\" fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n        <div class=\"created\"><i>Create at: </i> {{ session.createdAt| date: 'longDate'}}</div>\r\n        <div class=\"updated\"><i>Last update: </i> {{ session.updatedAt| date: 'longDate'}}</div>\r\n      </div>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n",
@@ -12386,10 +12386,10 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "867c169d2b824173ff8edee02ffbd242b2731d18"
+    "hash": "b88a0ba02c7c7847928c8987f0ff2d371e6965e2"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -14407,194 +14407,194 @@
       }
     },
     "s": {
-      "0": 682,
-      "1": 12,
-      "2": 12,
-      "3": 12,
-      "4": 768,
-      "5": 18,
-      "6": 18,
-      "7": 18,
-      "8": 2700,
-      "9": 60,
-      "10": 60,
-      "11": 60,
-      "12": 2700,
-      "13": 2640,
-      "14": 2640,
-      "15": 2640,
-      "16": 2640,
-      "17": 1432,
-      "18": 30,
-      "19": 30,
-      "20": 30,
-      "21": 12,
-      "22": 12,
-      "23": 12,
-      "24": 30,
-      "25": 30,
-      "26": 30,
-      "27": 30,
-      "28": 30,
-      "29": 30,
-      "30": 30,
-      "31": 30,
-      "32": 30,
-      "33": 30,
-      "34": 30,
-      "35": 30,
-      "36": 30,
-      "37": 30,
-      "38": 30,
-      "39": 30,
-      "40": 30,
-      "41": 30,
-      "42": 30,
-      "43": 30,
-      "44": 30,
-      "45": 30,
-      "46": 30,
-      "47": 30,
-      "48": 30,
-      "49": 1432,
-      "50": 1402,
-      "51": 1402,
-      "52": 1402,
-      "53": 1402,
-      "54": 1402,
-      "55": 1402,
-      "56": 1402,
-      "57": 103,
-      "58": 30,
-      "59": 30,
-      "60": 30,
-      "61": 30,
-      "62": 30,
-      "63": 30,
-      "64": 30,
-      "65": 30,
-      "66": 30,
-      "67": 30,
+      "0": 228,
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 256,
+      "5": 6,
+      "6": 6,
+      "7": 6,
+      "8": 900,
+      "9": 20,
+      "10": 20,
+      "11": 20,
+      "12": 900,
+      "13": 880,
+      "14": 880,
+      "15": 880,
+      "16": 880,
+      "17": 478,
+      "18": 10,
+      "19": 10,
+      "20": 10,
+      "21": 4,
+      "22": 4,
+      "23": 4,
+      "24": 10,
+      "25": 10,
+      "26": 10,
+      "27": 10,
+      "28": 10,
+      "29": 10,
+      "30": 10,
+      "31": 10,
+      "32": 10,
+      "33": 10,
+      "34": 10,
+      "35": 10,
+      "36": 10,
+      "37": 10,
+      "38": 10,
+      "39": 10,
+      "40": 10,
+      "41": 10,
+      "42": 10,
+      "43": 10,
+      "44": 10,
+      "45": 10,
+      "46": 10,
+      "47": 10,
+      "48": 10,
+      "49": 478,
+      "50": 468,
+      "51": 468,
+      "52": 468,
+      "53": 468,
+      "54": 468,
+      "55": 468,
+      "56": 468,
+      "57": 35,
+      "58": 10,
+      "59": 10,
+      "60": 10,
+      "61": 10,
+      "62": 10,
+      "63": 10,
+      "64": 10,
+      "65": 10,
+      "66": 10,
+      "67": 10,
       "68": 0,
-      "69": 30,
-      "70": 30,
-      "71": 18,
-      "72": 18,
-      "73": 18,
-      "74": 18,
-      "75": 12,
-      "76": 12,
-      "77": 12,
-      "78": 6,
-      "79": 6,
-      "80": 6,
-      "81": 6,
-      "82": 30,
-      "83": 12,
-      "84": 12,
-      "85": 103,
-      "86": 30,
-      "87": 103,
-      "88": 1450,
-      "89": 30,
-      "90": 30,
-      "91": 30,
-      "92": 30,
-      "93": 30,
-      "94": 30,
-      "95": 30,
-      "96": 30,
-      "97": 1450,
-      "98": 1420,
-      "99": 1420,
-      "100": 1420,
-      "101": 1420,
-      "102": 1420,
-      "103": 1420,
-      "104": 103
+      "69": 10,
+      "70": 10,
+      "71": 6,
+      "72": 6,
+      "73": 6,
+      "74": 6,
+      "75": 4,
+      "76": 4,
+      "77": 4,
+      "78": 2,
+      "79": 2,
+      "80": 2,
+      "81": 2,
+      "82": 10,
+      "83": 4,
+      "84": 4,
+      "85": 35,
+      "86": 10,
+      "87": 35,
+      "88": 484,
+      "89": 10,
+      "90": 10,
+      "91": 10,
+      "92": 10,
+      "93": 10,
+      "94": 10,
+      "95": 10,
+      "96": 10,
+      "97": 484,
+      "98": 474,
+      "99": 474,
+      "100": 474,
+      "101": 474,
+      "102": 474,
+      "103": 474,
+      "104": 35
     },
     "f": {
-      "0": 682,
-      "1": 768,
-      "2": 2700,
-      "3": 1432,
-      "4": 12,
-      "5": 103,
-      "6": 30,
-      "7": 30,
-      "8": 18,
-      "9": 12,
-      "10": 6,
-      "11": 6,
-      "12": 30,
-      "13": 12,
-      "14": 30,
-      "15": 1450
+      "0": 228,
+      "1": 256,
+      "2": 900,
+      "3": 478,
+      "4": 4,
+      "5": 35,
+      "6": 10,
+      "7": 10,
+      "8": 6,
+      "9": 4,
+      "10": 2,
+      "11": 2,
+      "12": 10,
+      "13": 4,
+      "14": 10,
+      "15": 484
     },
     "b": {
       "0": [
-        12,
-        670
+        4,
+        224
       ],
       "1": [
-        18,
-        750
+        6,
+        250
       ],
       "2": [
-        60,
-        2640
+        20,
+        880
       ],
       "3": [
-        2640,
-        60
+        880,
+        20
       ],
       "4": [
-        30,
-        1402
+        10,
+        468
       ],
       "5": [
-        1402,
-        30
+        468,
+        10
       ],
       "6": [
         0,
-        30
+        10
       ],
       "7": [
-        18,
-        12
+        6,
+        4
       ],
       "8": [
-        6,
-        6
+        2,
+        2
       ],
       "9": [
-        18,
-        12
+        6,
+        4
       ],
       "10": [
-        18,
-        12
+        6,
+        4
       ],
       "11": [
-        18,
-        12
+        6,
+        4
       ],
       "12": [
-        18,
-        12
+        6,
+        4
       ],
       "13": [
-        30,
-        30
+        10,
+        10
       ],
       "14": [
-        30,
-        1420
+        10,
+        474
       ],
       "15": [
-        1420,
-        30
+        474,
+        10
       ]
     },
     "inputSourceMap": {
@@ -14656,8 +14656,8 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts",
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\form\\form.component.html"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\form\\form.component.ts",
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\form\\form.component.html"
       ],
       "sourcesContent": [
         "import { Component, OnInit } from '@angular/core';\r\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\r\nimport { MatSnackBar } from '@angular/material/snack-bar';\r\nimport { ActivatedRoute, Router } from '@angular/router';\r\nimport { SessionService } from '../../../../services/session.service';\r\nimport { TeacherService } from '../../../../services/teacher.service';\r\nimport { Session } from '../../interfaces/session.interface';\r\nimport { SessionApiService } from '../../services/session-api.service';\r\n\r\n@Component({\r\n  selector: 'app-form',\r\n  templateUrl: './form.component.html',\r\n  styleUrls: ['./form.component.scss']\r\n})\r\nexport class FormComponent implements OnInit {\r\n\r\n  public onUpdate: boolean = false;\r\n  public sessionForm: FormGroup | undefined;\r\n  public teachers$ = this.teacherService.all();\r\n  private id: string | undefined;\r\n\r\n  constructor(\r\n    private route: ActivatedRoute,\r\n    private fb: FormBuilder,\r\n    private matSnackBar: MatSnackBar,\r\n    private sessionApiService: SessionApiService,\r\n    private sessionService: SessionService,\r\n    private teacherService: TeacherService,\r\n    private router: Router\r\n  ) {\r\n  }\r\n\r\n  public ngOnInit(): void {\r\n    if (!this.sessionService.sessionInformation!.admin) {\r\n      this.router.navigate(['/sessions']);\r\n    }\r\n    const url = this.router.url;\r\n    if (url.includes('update')) {\r\n      this.onUpdate = true;\r\n      this.id = this.route.snapshot.paramMap.get('id')!;\r\n      this.sessionApiService\r\n        .detail(this.id)\r\n        .subscribe((session: Session) => this.initForm(session));\r\n    } else {\r\n      this.initForm();\r\n    }\r\n  }\r\n\r\n  public submit(): void {\r\n    const session = this.sessionForm?.value as Session;\r\n\r\n    if (!this.onUpdate) {\r\n      this.sessionApiService\r\n        .create(session)\r\n        .subscribe((_: Session) => this.exitPage('Session created !'));\r\n    } else {\r\n      this.sessionApiService\r\n        .update(this.id!, session)\r\n        .subscribe((_: Session) => this.exitPage('Session updated !'));\r\n    }\r\n  }\r\n\r\n  private initForm(session?: Session): void {\r\n    this.sessionForm = this.fb.group({\r\n      name: [\r\n        session ? session.name : '',\r\n        [Validators.required]\r\n      ],\r\n      date: [\r\n        session ? new Date(session.date).toISOString().split('T')[0] : '',\r\n        [Validators.required]\r\n      ],\r\n      teacher_id: [\r\n        session ? session.teacher_id : '',\r\n        [Validators.required]\r\n      ],\r\n      description: [\r\n        session ? session.description : '',\r\n        [\r\n          Validators.required,\r\n          Validators.max(2000)\r\n        ]\r\n      ],\r\n    });\r\n  }\r\n\r\n  private exitPage(message: string): void {\r\n    this.matSnackBar.open(message, 'Close', { duration: 3000 });\r\n    this.router.navigate(['sessions']);\r\n  }\r\n}\r\n",
@@ -14665,10 +14665,10 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "8e128c6a71e6d19a8d4d83072cae543b726e8302"
+    "hash": "7701e0c121f9c2d9ea0560d75fcd0ac98bc572cf"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\list\\list.component.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\list\\list.component.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\list\\list.component.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\list\\list.component.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -16004,131 +16004,131 @@
       }
     },
     "s": {
-      "0": 581,
-      "1": 103,
-      "2": 103,
-      "3": 103,
-      "4": 103,
-      "5": 103,
-      "6": 103,
-      "7": 103,
-      "8": 108,
-      "9": 396,
-      "10": 108,
-      "11": 108,
-      "12": 108,
-      "13": 108,
-      "14": 108,
-      "15": 108,
-      "16": 396,
-      "17": 288,
-      "18": 288,
-      "19": 103,
-      "20": 108,
-      "21": 396,
-      "22": 108,
-      "23": 108,
-      "24": 108,
-      "25": 108,
-      "26": 108,
-      "27": 108,
-      "28": 108,
-      "29": 108,
-      "30": 108,
-      "31": 108,
-      "32": 108,
-      "33": 108,
-      "34": 108,
-      "35": 108,
-      "36": 108,
-      "37": 108,
-      "38": 108,
-      "39": 108,
-      "40": 108,
-      "41": 108,
-      "42": 108,
-      "43": 396,
-      "44": 288,
-      "45": 288,
-      "46": 288,
-      "47": 288,
-      "48": 288,
-      "49": 288,
-      "50": 288,
-      "51": 288,
-      "52": 288,
-      "53": 288,
-      "54": 288,
-      "55": 288,
-      "56": 103,
-      "57": 127,
-      "58": 127,
-      "59": 127,
-      "60": 886,
-      "61": 103,
-      "62": 127,
-      "63": 103,
-      "64": 725,
-      "65": 127,
-      "66": 127,
-      "67": 127,
-      "68": 127,
-      "69": 127,
-      "70": 127,
-      "71": 127,
-      "72": 127,
-      "73": 127,
-      "74": 725,
-      "75": 598,
-      "76": 598,
-      "77": 598,
-      "78": 598,
-      "79": 103
+      "0": 198,
+      "1": 35,
+      "2": 35,
+      "3": 35,
+      "4": 35,
+      "5": 35,
+      "6": 35,
+      "7": 35,
+      "8": 36,
+      "9": 132,
+      "10": 36,
+      "11": 36,
+      "12": 36,
+      "13": 36,
+      "14": 36,
+      "15": 36,
+      "16": 132,
+      "17": 96,
+      "18": 96,
+      "19": 35,
+      "20": 36,
+      "21": 132,
+      "22": 36,
+      "23": 36,
+      "24": 36,
+      "25": 36,
+      "26": 36,
+      "27": 36,
+      "28": 36,
+      "29": 36,
+      "30": 36,
+      "31": 36,
+      "32": 36,
+      "33": 36,
+      "34": 36,
+      "35": 36,
+      "36": 36,
+      "37": 36,
+      "38": 36,
+      "39": 36,
+      "40": 36,
+      "41": 36,
+      "42": 36,
+      "43": 132,
+      "44": 96,
+      "45": 96,
+      "46": 96,
+      "47": 96,
+      "48": 96,
+      "49": 96,
+      "50": 96,
+      "51": 96,
+      "52": 96,
+      "53": 96,
+      "54": 96,
+      "55": 96,
+      "56": 35,
+      "57": 43,
+      "58": 43,
+      "59": 43,
+      "60": 299,
+      "61": 35,
+      "62": 43,
+      "63": 35,
+      "64": 246,
+      "65": 43,
+      "66": 43,
+      "67": 43,
+      "68": 43,
+      "69": 43,
+      "70": 43,
+      "71": 43,
+      "72": 43,
+      "73": 43,
+      "74": 246,
+      "75": 203,
+      "76": 203,
+      "77": 203,
+      "78": 203,
+      "79": 35
     },
     "f": {
-      "0": 581,
-      "1": 108,
-      "2": 396,
-      "3": 108,
-      "4": 396,
-      "5": 103,
-      "6": 127,
-      "7": 886,
-      "8": 127,
-      "9": 725
+      "0": 198,
+      "1": 36,
+      "2": 132,
+      "3": 36,
+      "4": 132,
+      "5": 35,
+      "6": 43,
+      "7": 299,
+      "8": 43,
+      "9": 246
     },
     "b": {
       "0": [
-        103,
-        478
+        35,
+        163
       ],
       "1": [
-        108,
-        288
+        36,
+        96
       ],
       "2": [
-        288,
-        108
+        96,
+        36
       ],
       "3": [
-        108,
-        288
+        36,
+        96
       ],
       "4": [
-        288,
-        108
+        96,
+        36
       ],
       "5": [
-        127,
-        127
+        43,
+        43
       ],
       "6": [
-        127,
-        598
+        43,
+        203
       ],
       "7": [
-        598,
-        127
+        203,
+        43
       ]
     },
     "inputSourceMap": {
@@ -16151,8 +16151,8 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\list\\list.component.html",
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\list\\list.component.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\list\\list.component.html",
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\components\\list\\list.component.ts"
       ],
       "sourcesContent": [
         "<div class=\"list\">\r\n  <mat-card>\r\n    <mat-card-header fxLayout=\"row\" fxLayoutAlign=\"space-between center\">\r\n      <mat-card-title class=\"m0\">Rentals available</mat-card-title>\r\n      <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\" routerLink=\"create\">\r\n        <mat-icon>add</mat-icon>\r\n        <span class=\"ml1\">Create</span>\r\n      </button>\r\n    </mat-card-header>\r\n    <div class=\"items mt2\" fxLayout=\"row wrap\" fxLayout.lt-md=\"column\">\r\n      <mat-card class=\"item\" *ngFor=\"let session of (sessions$ | async)\" fxFlex>\r\n        <mat-card-header>\r\n          <mat-card-title>{{ session.name }}</mat-card-title>\r\n          <mat-card-subtitle>\r\n            Session on {{ session.date | date: 'longDate'}}\r\n          </mat-card-subtitle>\r\n        </mat-card-header>\r\n        <div mat-card-image fxLayoutAlign=\"center center\">\r\n          <img class=\"picture\" src=\"assets/sessions.png\" alt=\"Yoga session\">\r\n        </div>\r\n        <mat-card-content>\r\n          <p>\r\n            {{ session.description }}\r\n          </p>\r\n        </mat-card-content>\r\n        <mat-card-actions>\r\n          <button mat-raised-button color=\"primary\" [routerLink]=\"['detail',session.id]\">\r\n            <mat-icon>search</mat-icon>\r\n            <span class=\"ml1\">Detail</span>\r\n          </button>\r\n          <button *ngIf=\"user!.admin\" mat-raised-button color=\"primary\"\r\n                  [routerLink]=\"['update',session.id]\">\r\n            <mat-icon>edit</mat-icon>\r\n            <span class=\"ml1\">Edit</span>\r\n          </button>\r\n        </mat-card-actions>\r\n      </mat-card>\r\n    </div>\r\n  </mat-card>\r\n</div>\r\n",
@@ -16160,10 +16160,10 @@
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "8f5577134463811cedf1960f9f3df59bba59664a"
+    "hash": "06b65d4c5f4a0fa53eae9014c4bf5dcf37393d85"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -16325,22 +16325,22 @@
       }
     },
     "s": {
-      "0": 103,
-      "1": 103,
-      "2": 103,
-      "3": 103,
-      "4": 103,
-      "5": 103,
-      "6": 103
+      "0": 35,
+      "1": 35,
+      "2": 35,
+      "3": 35,
+      "4": 35,
+      "5": 35,
+      "6": 35
     },
     "f": {
-      "0": 103,
-      "1": 103
+      "0": 35,
+      "1": 35
     },
     "b": {
       "0": [
-        103,
-        103
+        35,
+        35
       ]
     },
     "inputSourceMap": {
@@ -16360,17 +16360,17 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\sessions-routing.module.ts"
       ],
       "sourcesContent": [
         "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\nimport { DetailComponent } from './components/detail/detail.component';\r\nimport { FormComponent } from './components/form/form.component';\r\nimport { ListComponent } from './components/list/list.component';\r\n\r\nconst routes: Routes = [\r\n  { path: '', title: 'Sessions', component: ListComponent },\r\n  { path: 'detail/:id', title: 'Sessions - detail', component: DetailComponent },\r\n  { path: 'create', title: 'Sessions - create', component: FormComponent },\r\n  { path: 'update/:id', title: 'Sessions - update', component: FormComponent }\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forChild(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class SessionsRoutingModule {\r\n}\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "a414767892310cc1319e6d1dbd3c5c4b7ee1c482"
+    "hash": "ab3985765c9138434a0b347ee77dae08da4b6118"
   },
-  "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\sessions.module.ts": {
-    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\sessions.module.ts",
+  "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\sessions.module.ts": {
+    "path": "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\sessions.module.ts",
     "statementMap": {
       "0": {
         "start": {
@@ -16542,23 +16542,23 @@
       }
     },
     "s": {
-      "0": 103,
-      "1": 103,
-      "2": 103,
-      "3": 103,
-      "4": 103,
-      "5": 103,
-      "6": 103,
-      "7": 103
+      "0": 35,
+      "1": 35,
+      "2": 35,
+      "3": 35,
+      "4": 35,
+      "5": 35,
+      "6": 35,
+      "7": 35
     },
     "f": {
-      "0": 103,
-      "1": 103
+      "0": 35,
+      "1": 35
     },
     "b": {
       "0": [
-        103,
-        103
+        35,
+        35
       ]
     },
     "inputSourceMap": {
@@ -16583,13 +16583,13 @@
       ],
       "sourceRoot": "",
       "sources": [
-        "C:\\Users\\corwy\\OneDrive\\Bureau\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\sessions.module.ts"
+        "C:\\Users\\corwy\\OneDrive\\Bureau\\projet 5\\Testing-fullstack-app-yoga\\front\\src\\app\\features\\sessions\\sessions.module.ts"
       ],
       "sourcesContent": [
         "import { NgModule } from '@angular/core';\r\nimport { CommonModule, registerLocaleData } from '@angular/common';\r\nimport { FlexLayoutModule } from '@angular/flex-layout';\r\nimport { ReactiveFormsModule } from '@angular/forms';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatFormFieldModule } from '@angular/material/form-field';\r\nimport { MatIconModule } from '@angular/material/icon';\r\nimport { MatInputModule } from '@angular/material/input';\r\nimport { MatSelectModule } from '@angular/material/select';\r\nimport { MatSnackBarModule } from '@angular/material/snack-bar';\r\nimport { ListComponent } from './components/list/list.component';\r\nimport { FormComponent } from './components/form/form.component';\r\nimport { DetailComponent } from './components/detail/detail.component';\r\nimport { SessionsRoutingModule } from './sessions-routing.module';\r\nimport localeFr from '@angular/common/locales/fr';\r\nregisterLocaleData(localeFr);\r\n\r\nconst materialModules = [\r\n  MatButtonModule,\r\n  MatCardModule,\r\n  MatFormFieldModule,\r\n  MatIconModule,\r\n  MatInputModule,\r\n  MatSnackBarModule,\r\n  MatSelectModule\r\n];\r\n\r\n@NgModule({\r\n  declarations: [\r\n    ListComponent,\r\n    FormComponent,\r\n    DetailComponent\r\n  ],\r\n  imports: [\r\n    CommonModule,\r\n    FlexLayoutModule,\r\n    ReactiveFormsModule,\r\n    SessionsRoutingModule,\r\n    ...materialModules\r\n  ]\r\n})\r\nexport class SessionsModule { }\r\n"
       ]
     },
     "_coverageSchema": "1a1c01bbd47fc00a2c39e90264f33305004495a9",
-    "hash": "4720fee3169be21f8e42c1c64786697d080e8d4b"
+    "hash": "8666847bc4af17f79c5265c2cd8e15dd9bfd0131"
   }
 }

@@ -12,6 +12,5 @@ Launching test:
 > npm run test
 
 ### E2E tests
-
 Launching test:
 > npm run e2e

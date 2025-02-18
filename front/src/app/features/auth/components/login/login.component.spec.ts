@@ -14,21 +14,6 @@ import { AuthService } from '../../services/auth.service';
 import { LoginComponent } from './login.component';
 import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
 
-// import { HttpClientTestingModule } from '@angular/common/http/testing';
-// import { ComponentFixture, TestBed } from '@angular/core/testing';
-// import { ReactiveFormsModule } from '@angular/forms';
-// import { MatCardModule } from '@angular/material/card';
-// import { MatFormFieldModule } from '@angular/material/form-field';
-// import { MatIconModule } from '@angular/material/icon';
-// import { MatInputModule } from '@angular/material/input';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { RouterTestingModule } from '@angular/router/testing';
-// import { of, throwError } from 'rxjs';
-// import { SessionService } from 'src/app/services/session.service';
-// import { AuthService } from '../../services/auth.service';
-// import { LoginComponent } from './login.component';
-// import { SessionInformation } from 'src/app/interfaces/sessionInformation.interface';
-
 // Forcer TypeScript à reconnaître les types Jest
 /// <reference types="jest" />
 
